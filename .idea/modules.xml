@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$USER_HOME$/WebstormProjects/GeneTind/.idea/GeneTind.iml" filepath="$USER_HOME$/WebstormProjects/GeneTind/.idea/GeneTind.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/startup-nextjs-main.iml" filepath="$PROJECT_DIR$/.idea/startup-nextjs-main.iml" />
     </modules>
   </component>
