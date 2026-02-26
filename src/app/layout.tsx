@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import { Metadata } from "next";
+import Script from "next/script";
 import "../styles/index.css";
 import ClientLayout from "./ClientLayout";
 
@@ -22,6 +23,7 @@ export default function RootLayout({
     <html suppressHydrationWarning lang="zh-CN">
       <head />
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+        <Script defer src="https://cloud.umami.is/script.js" data-website-id="7d79219d-6f80-412c-b896-2d508b01940a" />
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>
