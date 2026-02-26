@@ -10,6 +10,10 @@ const Breadcrumb = ({
   return (
     <>
       <section className="relative z-10 overflow-hidden pt-28 lg:pt-[150px]">
+        {/* Background decorations for AI vibe */}
+        <div className="absolute top-0 left-0 w-full h-full -z-10 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none"></div>
+        <div className="absolute left-1/2 top-0 -z-10 -translate-x-1/2 w-[60%] h-[300px] rounded-full bg-primary/20 blur-[120px] opacity-50 dark:opacity-30 mix-blend-screen pointer-events-none"></div>
+
         <div className="container">
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 md:w-8/12 lg:w-7/12">

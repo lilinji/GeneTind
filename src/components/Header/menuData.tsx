@@ -15,18 +15,24 @@ const menuData: Menu[] = [
   },
   {
     id: 3,
+    title: "GneSkills",
+    path: "https://www.skillkit.sh",
+    newTab: true,
+  },
+  {
+    id: 4,
     title: "About",
     path: "/about",
     newTab: false,
   },
   {
-    id: 4,
+    id: 5,
     title: "Blog",
     path: "https://ml.genetind.com",
     newTab: true,
   },
   {
-    id: 5,
+    id: 6,
     title: "Support",
     path: "/contact",
     newTab: false,

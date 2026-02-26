@@ -9,11 +9,11 @@ const checkIcon = (
 
 const AboutSectionOne = () => {
   const List = ({ text }) => (
-    <p className="text-body-color mb-5 flex items-center text-lg font-medium">
-      <span className="bg-primary/10 text-primary mr-4 flex h-[30px] w-[30px] items-center justify-center rounded-md">
+    <p className="text-body-color mb-5 flex items-center text-lg font-medium group cursor-default">
+      <span className="bg-primary/10 border border-primary/20 shadow-[inset_0_0_10px_rgba(74,108,247,0.1)] text-primary mr-4 flex h-[40px] w-[40px] items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white group-hover:shadow-[0_0_20px_rgba(74,108,247,0.4)]">
         {checkIcon}
       </span>
-      {text}
+      <span className="group-hover:text-primary dark:group-hover:text-white transition-colors duration-300 tracking-wide">{text}</span>
     </p>
   );
 
