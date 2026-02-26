@@ -134,7 +134,7 @@ layer(base);
 
 @layer base {
   body {
-    font-family: "Inter", sans-serif;
+    font-family: "Outfit", "Inter", sans-serif;
   }
 }
 

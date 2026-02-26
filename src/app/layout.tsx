@@ -1,10 +1,11 @@
-import { Inter } from "next/font/google";
+import { Inter, Outfit } from "next/font/google";
 import { Metadata } from "next";
 import Script from "next/script";
 import "../styles/index.css";
 import ClientLayout from "./ClientLayout";
 
 const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "吉因丰科技 | GneroAI 智能平台",
@@ -22,7 +23,7 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="zh-CN">
       <head />
-      <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
+      <body className={`bg-[#FCFCFC] dark:bg-black ${outfit.className}`}>
         <Script defer src="https://cloud.umami.is/script.js" data-website-id="7d79219d-6f80-412c-b896-2d508b01940a" />
         <ClientLayout>{children}</ClientLayout>
       </body>
