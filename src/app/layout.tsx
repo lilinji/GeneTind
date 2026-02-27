@@ -11,7 +11,14 @@ export const metadata: Metadata = {
   title: "吉因丰科技 | GneroAI 智能平台",
   description: "以 AI 为核心，深度融合多组学、生物计算与智能分析能力，为生命科学研究与产业创新提供一体化智能平台。",
   icons: {
-    icon: "/favicon.ico",
+    icon: [
+      { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
+      { url: "/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/web-app-manifest-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    apple: [
+      { url: "/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" },
+    ],
   },
 };
 
