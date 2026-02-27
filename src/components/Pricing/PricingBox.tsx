@@ -8,30 +8,32 @@ const PricingBox = (props: {
   const { price, duration, packageName, subtitle, children } = props;
 
   return (
-    <div className="w-full">
-      <div className="shadow-three hover:shadow-one dark:bg-gray-dark dark:shadow-two dark:hover:shadow-gray-dark relative z-10 rounded-xs bg-white px-8 py-10">
-        <div className="flex items-center justify-between">
-          <h3 className="price mb-2 text-[32px] font-bold text-black dark:text-white">
+    <div className="w-full h-full group">
+      <div className="relative h-full rounded-2xl bg-white/60 dark:bg-gray-dark/40 backdrop-blur-md border border-white/20 dark:border-white/10 p-8 shadow-two drop-shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(74,108,247,0.3)] hover:border-primary/30 overflow-hidden z-10">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
+        <div className="relative z-10 flex items-center justify-between">
+          <h3 className="mb-2 text-[32px] font-bold text-black dark:text-white transition-colors duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-[#9b8fff]">
             {price && (
               <>
                 $<span className="amount">{price}</span>
-                <span className="time text-body-color text-lg font-medium">
+                <span className="text-body-color text-lg font-medium transition-colors duration-300 group-hover:text-body-color-dark dark:group-hover:text-gray-300">
                   /{duration}
                 </span>
               </>
             )}
           </h3>
-          <h4 className="text-dark mb-2 text-xl font-bold dark:text-white">
+          <h4 className="mb-2 text-xl font-bold text-dark dark:text-white transition-colors duration-300 group-hover:text-primary">
             {packageName}
           </h4>
         </div>
-        <p className="text-body-color mb-7 text-base">{subtitle}</p>
-        <div className="border-body-color/10 mb-8 border-b pb-8 dark:border-white/10">
-          <button className="bg-primary/80 hover:shadow-signUp flex w-full items-center justify-center rounded-xs p-3 text-base font-semibold text-white transition duration-300 ease-in-out">
+        <p className="relative z-10 text-body-color mb-7 text-base transition-colors duration-300 group-hover:text-body-color-dark dark:group-hover:text-gray-300">{subtitle}</p>
+        <div className="relative z-10 border-b border-body-color/10 pb-8 mb-8 dark:border-white/10">
+          <button className="flex w-full items-center justify-center rounded-full bg-primary/90 p-4 text-base font-bold text-white transition-all duration-300 hover:bg-primary shadow-[0_5px_15px_rgba(74,108,247,0.2)] hover:shadow-[0_10px_25px_rgba(74,108,247,0.4)] hover:-translate-y-1">
             Start Free Trial
           </button>
         </div>
-        <div>{children}</div>
+        <div className="relative z-10">{children}</div>
         <div className="absolute right-0 bottom-0 z-[-1]">
           <svg
             width="179"

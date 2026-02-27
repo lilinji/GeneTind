@@ -34,8 +34,13 @@ const testimonialData: Testimonial[] = [
 
 const Testimonials = () => {
   return (
-    <section className="dark:bg-bg-color-dark bg-gray-light relative z-10 py-16 md:py-20 lg:py-28">
-      <div className="container">
+    <section className="relative z-10 overflow-hidden py-16 md:py-20 lg:py-28">
+      {/* Ambient AI Background */}
+      <div className="absolute top-0 left-0 w-full h-full -z-10 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none"></div>
+      <div className="absolute left-1/4 top-1/2 -z-10 w-[500px] h-[500px] rounded-full bg-primary/10 blur-[150px] mix-blend-screen pointer-events-none -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute right-1/4 bottom-0 -z-10 w-[400px] h-[400px] rounded-full bg-[#9b8fff]/10 blur-[120px] mix-blend-screen pointer-events-none translate-x-1/2 translate-y-1/4"></div>
+
+      <div className="container relative z-20">
         <SectionTitle
           title="来自客户的声音"
           paragraph="赋能全球科研机构与生物医药企业，助力生命科学通过 AI 技术加速创新突破。"
