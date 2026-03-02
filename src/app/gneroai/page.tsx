@@ -19,13 +19,22 @@ const GneroAIPage = () => {
             <p>
               以 GneroAI 为核心，深度融合多组学、生物计算与智能分析能力，为生命科学研究与产业创新提供一体化智能平台。
             </p>
-            <Link
-              href="https://ml.genetind.com"
-              target="_blank"
-              className="inline-block rounded-sm bg-primary px-8 py-3 text-base font-semibold text-white duration-300 hover:bg-primary/90"
-            >
-              进入文档
-            </Link>
+            <div className="flex flex-wrap gap-4">
+              <Link
+                href="https://ml.genetind.com"
+                target="_blank"
+                className="inline-block rounded-sm bg-primary px-8 py-3 text-base font-semibold text-white duration-300 hover:bg-primary/90"
+              >
+                进入文档
+              </Link>
+              <Link
+                href="https://public.genetind.com/"
+                target="_blank"
+                className="inline-block rounded-sm bg-gradient-to-r from-purple-600 to-indigo-600 px-8 py-3 text-base font-semibold text-white duration-300 hover:from-purple-700 hover:to-indigo-700"
+              >
+                ✨ 神秘功能
+              </Link>
+            </div>
           </div>
         }
       />
