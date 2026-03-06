@@ -28,7 +28,7 @@ const menuData: Menu[] = [
   {
     id: 5,
     title: "Blog",
-    path: "https://ml.genetind.com",
+    path: "https://gnero.genetind.com",
     newTab: true,
   },
   {

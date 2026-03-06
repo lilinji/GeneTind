@@ -21,7 +21,7 @@ const GneroAIPage = () => {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="https://ml.genetind.com"
+                href="https://gnero.genetind.com"
                 target="_blank"
                 className="inline-block rounded-sm bg-primary px-8 py-3 text-base font-semibold text-white duration-300 hover:bg-primary/90"
               >

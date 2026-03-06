@@ -1,10 +1,21 @@
+"use client";
+
 import { Feature } from "@/types/feature";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const SingleFeature = ({ feature }: { feature: Feature }) => {
   const { icon, title, paragraph } = feature;
   return (
     <div className="w-full h-full group">
       <div className="wow fadeInUp relative h-full rounded-2xl bg-white/60 dark:bg-gray-dark/40 backdrop-blur-md border border-white/20 dark:border-white/10 p-8 shadow-two drop-shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(74,108,247,0.3)] hover:border-primary/30 overflow-hidden" data-wow-delay=".15s">
+        <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+          borderWidth={3}
+        />
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
         <div className="relative z-10 bg-gradient-to-br from-primary/20 to-primary/5 text-primary mb-8 flex h-[80px] w-[80px] items-center justify-center rounded-2xl shadow-[inset_0_0_20px_rgba(74,108,247,0.15)] transition-all duration-500 group-hover:scale-110 group-hover:bg-primary group-hover:text-white group-hover:shadow-[0_0_25px_rgba(74,108,247,0.5)]">
