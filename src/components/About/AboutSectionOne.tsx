@@ -1,5 +1,6 @@
 import Image from "next/image";
 import SectionTitle from "../Common/SectionTitle";
+import { useTranslations } from "next-intl";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">
@@ -8,6 +9,7 @@ const checkIcon = (
 );
 
 const AboutSectionOne = () => {
+  const t = useTranslations("About");
   const List = ({ text }) => (
     <p className="text-body-color mb-5 flex items-center text-lg font-medium group cursor-default">
       <span className="bg-primary/10 border border-primary/20 shadow-[inset_0_0_10px_rgba(74,108,247,0.1)] text-primary mr-4 flex h-[40px] w-[40px] items-center justify-center rounded-xl transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-white group-hover:shadow-[0_0_20px_rgba(74,108,247,0.4)]">
@@ -24,8 +26,8 @@ const AboutSectionOne = () => {
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-4 lg:w-1/2">
               <SectionTitle
-                title="AI 赋能生命科学，开启解码基因新纪元"
-                paragraph="NeroAI 深度融合组学数据与尖端人工智能算法，为您提供精准、高效的分析决策支持。我们的模型在基因组、转录组及多组学整合分析中展现出卓越的性能，助力科研与临床高效转化。"
+                title={t("title")}
+                paragraph={t("paragraph")}
                 mb="44px"
               />
 
@@ -35,15 +37,15 @@ const AboutSectionOne = () => {
               >
                 <div className="mx-[-12px] flex flex-wrap">
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="多模型融合架构" />
-                    <List text="高精度变异检测" />
-                    <List text="端到端自动化流程" />
+                    <List text={t("check1")} />
+                    <List text={t("check2")} />
+                    <List text={t("check3")} />
                   </div>
 
                   <div className="w-full px-3 sm:w-1/2 lg:w-full xl:w-1/2">
-                    <List text="多组学关联分析" />
-                    <List text="临床级安全合规" />
-                    <List text="超大规模算力支撑" />
+                    <List text={t("check4")} />
+                    <List text={t("check5")} />
+                    <List text={t("check6")} />
                   </div>
                 </div>
               </div>

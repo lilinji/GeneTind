@@ -1,38 +1,39 @@
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
+import { useTranslations } from "next-intl";
 
-const testimonialData: Testimonial[] = [
+const getTestimonialData = (t: any): Testimonial[] => [
   {
     id: 1,
-    name: "张伟",
-    designation: "首席科学家 @ 某基因组学研究院",
-    content:
-      "Genetind AI 平台极大地加速了我们的组学数据分析流程。以前需要数周的变异检测工作现在仅需数小时，且准确度达到了临床级标准，真正实现了科研提速。",
+    name: t("t1_name"),
+    designation: t("t1_designation"),
+    content: t("t1_content"),
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Dr. Emily Chen",
-    designation: "研发总监 @ 创新生物医药公司",
-    content:
-      "生信分析一体机部署便捷，完美集成了我们所需的各种流程。私有化部署方案解决了数据安全顾虑，高性能算力支撑了我们大规模队列研究的需求。",
+    name: t("t2_name"),
+    designation: t("t2_designation"),
+    content: t("t2_content"),
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "刘洋",
-    designation: "实验室主管 @ 精准医学中心",
-    content:
-      "引入 Genetind LIMS 系统后，我们的样本全生命周期管理变得井井有条。自动化程度的提升显著降低了人为错误，让我们能更专注于数据背后的生物学意义。",
+    name: t("t3_name"),
+    designation: t("t3_designation"),
+    content: t("t3_content"),
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
 ];
 
 const Testimonials = () => {
+  const t = useTranslations("Testimonials");
+  const testimonialData = getTestimonialData(t);
+  
   return (
     <section className="relative z-10 overflow-hidden py-16 md:py-20 lg:py-28">
       {/* Ambient AI Background */}
@@ -42,8 +43,8 @@ const Testimonials = () => {
 
       <div className="container relative z-20">
         <SectionTitle
-          title="来自客户的声音"
-          paragraph="赋能全球科研机构与生物医药企业，助力生命科学通过 AI 技术加速创新突破。"
+          title={t("title")}
+          paragraph={t("paragraph")}
           center
         />
 

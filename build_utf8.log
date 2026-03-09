@@ -1,0 +1,59 @@
+﻿
+> startup-nextjs-template@2.2.1 build
+> next build
+
+node.exe : [baseline-browser-mapping] The data in this modul
+e is over two months old.  To ensure accurate Baseline data,
+ please update: `npm i baseline-browser-mapping@latest -D`
+所在位置 行:1 字符: 1
++ & "D:\Program Files\nodejs/node.exe" "D:\Program Files\nod
+ejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ([baseline-brow 
+   s...ping@latest -D`:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+   鈻?Next.js 16.0.10 (Turbopack)
+
+ 鈿?The "middleware" file convention is deprecated. Please us
+e "proxy" instead. Learn more: https://nextjs.org/docs/messa
+ges/middleware-to-proxy
+   Creating an optimized production build ...
+[baseline-browser-mapping] The data in this module is over t
+wo months old.  To ensure accurate Baseline data, please upd
+ate: `npm i baseline-browser-mapping@latest -D`
+ 鉁?Compiled successfully in 2.1s
+   Running TypeScript ...
+Failed to compile.
+
+.next/dev/types/validator.ts:24:44
+Type error: Type 'Route' does not satisfy the constraint '"/
+[locale]"'.
+  Type '"/"' is not assignable to type '"/[locale]"'.
+
+[0m [90m 22 |[39m
+ [90m 23 |[39m type [33mLayoutConfig[39m[33m<[39m[33m
+Route[39m [36mextends[39m [33mLayoutRoutes[39m [33m=[
+39m [33mLayoutRoutes[39m[33m>[39m [33m=[39m {
+[31m[1m>[22m[39m[90m 24 |[39m   [36mdefault[39m[33m
+:[39m [33mReact[39m[33m.[39m[33mComponentType[39m[33
+m<[39m[33mLayoutProps[39m[33m<[39m[33mRoute[39m[33m>
+>[39m [33m|[39m ((props[33m:[39m [33mLayoutProps[39m
+[33m<[39m[33mRoute[39m[33m>[39m) [33m=>[39m [33mReac
+t[39m[33m.[39m[33mReactNode[39m [33m|[39m [33mPromis
+e[39m[33m<[39m[33mReact[39m[33m.[39m[33mReactNode[3
+9m[33m>[39m [33m|[39m never [33m|[39m [36mvoid[39m 
+[33m|[39m [33mPromise[39m[33m<[39m[36mvoid[39m[33m>
+[39m)
+ [90m    |[39m                                            
+[31m[1m^[22m[39m
+ [90m 25 |[39m   generateStaticParams[33m?[39m[33m:[39
+m (props[33m:[39m { params[33m:[39m [33mParamMap[39m[
+[33mRoute[39m] }) [33m=>[39m [33mPromise[39m[33m<[39m
+[33many[39m[][33m>[39m [33m|[39m any[]
+ [90m 26 |[39m   generateMetadata[33m?[39m[33m:[39m (
+ [90m 27 |[39m     props[33m:[39m { params[33m:[39m [
+33mPromise[39m[33m<[39m[33mParamMap[39m[[33mRoute[39m
+][33m>[39m } [33m&[39m any[33m,[39m[0m
+Next.js build worker exited with code: 1 and signal: null

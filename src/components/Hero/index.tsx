@@ -1,9 +1,11 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from '@/i18n/navigation';
 import { useState, useEffect } from "react";
+import { useTranslations } from "next-intl";
 
 const Hero = () => {
+  const t = useTranslations("Hero");
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
@@ -33,25 +35,25 @@ const Hero = () => {
                     }`}
                   >
                     <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                      生命科学IT数据分析全景解决方案
+                      {t("title_main")}
                       <br />
-                      Life Science IT Data Analysis Panorama Solution
+                      {t("title_sub")}
                     </h1>
                     <p className="mb-12 text-base font-bold leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                      Genetind 是一家以数据服务为核心的技术型公司，主要经营数据信息服务企业核心目标让数据解码基因，推动精准医疗、生命科学及人工智能新发展
+                      {t("paragraph")}
                     </p>
                     <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                       <Link
                         href="https://gneroai.genetind.com"
                         className="rounded-xs bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                       >
-                        🔥 Get Pro
+                        {t("getPro")}
                       </Link>
                       <Link
                         href="https://github.com/lilinji/gneroai"
                         className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                       >
-                        Star on GitHub
+                        {t("starOnGithub")}
                       </Link>
                     </div>
                   </div>
@@ -63,22 +65,22 @@ const Hero = () => {
                     }`}
                   >
                     <div className="mb-6 inline-flex items-center rounded-full border border-green-600/30 dark:border-green-800/50 bg-green-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-green-700 dark:text-[#4ade80] sm:text-[10px] md:text-xs">
-                      1000 STARS ·1000+ SKILLS · 2,617 UNIQUE VISITORS · 1 WEEK OLD
+                      {t("slide2_tags")}
                     </div>
                     <h1 className="mb-5 text-3xl font-extrabold tracking-tight leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                      The first <span className="text-green-600 dark:text-[#4ade80]">bioinformatics-AI</span>
+                      {t("slide2_title_1")} <span className="text-green-600 dark:text-[#4ade80]">{t("slide2_title_highlight")}</span>
                       <br />
-                      AI agent skill library
+                      {t("slide2_title_2")}
                     </h1>
                     <p className="mb-12 text-base font-medium leading-relaxed text-body-color dark:text-gray-400 sm:text-lg md:text-xl max-w-[600px]">
-                      GeneTind-Life-Skills is where biological AI gets its skills: a curated, reproducible, open repository any agent can call.
+                      {t("slide2_paragraph")}
                     </p>
                     <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                       <Link
                         href="https://github.com/lilinji/GeneTind-Life-Skills"
                         className="rounded-xs bg-green-600 px-8 py-4 text-base font-semibold text-white dark:bg-[#4ade80] dark:text-black duration-300 ease-in-out hover:bg-green-700 dark:hover:bg-[#22c55e]"
                       >
-                        Explore Skills
+                        {t("exploreSkills")}
                       </Link>
                     </div>
                   </div>

@@ -1,10 +1,10 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname, useRouter } from "@/i18n/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { useTranslations, useLocale } from "next-intl";
 
 const Header = () => {
   // Navbar toggle
@@ -37,6 +37,14 @@ const Header = () => {
   };
 
   const usePathName = usePathname();
+  const t = useTranslations("Header");
+  const locale = useLocale();
+  const router = useRouter();
+
+  const toggleLanguage = () => {
+    const nextLocale = locale === 'zh' ? 'en' : 'zh';
+    router.replace(usePathName, { locale: nextLocale });
+  };
 
   return (
     <>
@@ -109,7 +117,7 @@ const Header = () => {
                               : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
                               }`}
                           >
-                            {menuItem.title}
+                            {t(menuItem.title)}
                           </Link>
                         ) : (
                           <>
@@ -117,7 +125,7 @@ const Header = () => {
                               onClick={() => handleSubmenu(index)}
                               className="text-dark group-hover:text-primary flex cursor-pointer items-center justify-between py-2 text-[17px] font-bold tracking-wider transition-colors lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 dark:text-white/70 dark:group-hover:text-white"
                             >
-                              {menuItem.title}
+                              {t(menuItem.title)}
                               <span className="pl-3">
                                 <svg width="25" height="24" viewBox="0 0 25 24">
                                   <path
@@ -139,7 +147,7 @@ const Header = () => {
                                   key={index}
                                   className="text-dark hover:text-primary block rounded-sm py-2.5 text-base font-semibold tracking-wide lg:px-3 dark:text-white/70 dark:hover:text-white transition-colors"
                                 >
-                                  {submenuItem.title}
+                                  {t(submenuItem.title)}
                                 </Link>
                               ))}
                             </div>
@@ -155,15 +163,22 @@ const Header = () => {
                   href="/signin"
                   className="text-dark hidden px-7 py-3 text-[17px] font-bold tracking-wider hover:text-primary transition-colors md:block dark:text-white"
                 >
-                  Sign In
+                  {t('SignIn')}
                 </Link>
                 <Link
                   href="/signup"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover bg-primary hover:bg-primary/90 hidden rounded-full px-8 py-3 text-[17px] font-bold tracking-wider text-white transition duration-300 md:block md:px-9 lg:px-6 xl:px-9"
+                  className="ease-in-up shadow-btn hover:shadow-btn-hover bg-primary hover:bg-primary/90 hidden rounded-full px-8 py-3 text-[17px] font-bold tracking-wider text-white transition duration-300 md:block md:px-9 lg:px-6 xl:px-9 mr-4"
                 >
-                  Sign Up
+                  {t('SignUp')}
                 </Link>
-                <div>
+                <div className="flex items-center space-x-2">
+                  <button
+                    onClick={toggleLanguage}
+                    className="flex h-9 w-9 items-center justify-center rounded-full text-dark dark:text-white hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
+                    aria-label="Toggle language"
+                  >
+                    <span className="text-sm font-bold uppercase">{locale === 'zh' ? 'EN' : '中'}</span>
+                  </button>
                   <ThemeToggler />
                 </div>
               </div>

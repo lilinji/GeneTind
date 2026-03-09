@@ -1,6 +1,9 @@
 import SectionTitle from "../Common/SectionTitle";
+import { useTranslations } from "next-intl";
 
 const GneroAIContent = () => {
+  const t = useTranslations("GneroAI");
+
   return (
     <section className="relative z-10 py-20 lg:py-[120px] overflow-hidden">
       {/* Background decorations for AI vibe */}
@@ -11,9 +14,9 @@ const GneroAIContent = () => {
         <div className="-mx-4 flex flex-wrap justify-center relative z-20">
           <div className="w-full px-4">
             <SectionTitle
-              title="探索 GneroAI 的无限可能"
+              title={t("title")}
               titleClassName="bg-clip-text text-transparent bg-gradient-to-r from-primary via-[#9b8fff] to-primary bg-[length:200%_auto] animate-shimmer"
-              paragraph="我们正致力于构建下一代生命科学 AI 平台。从智能对话到组学数据分析，GneroAI 将为您带来前所未有的效率提升。多款创新产品即将面世，敬请期待。"
+              paragraph={t("paragraph")}
               center
               mb="80px"
             />
@@ -34,14 +37,14 @@ const GneroAIContent = () => {
                   </svg>
                 </div>
                 <span className="inline-flex items-center rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-xs font-bold text-primary backdrop-blur-md">
-                  核心智能
+                  {t("tag1")}
                 </span>
               </div>
               <h3 className="relative z-10 mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl transition-colors group-hover:text-primary">
-                GneroAI Chat
+                {t("card1_title")}
               </h3>
               <p className="relative z-10 text-base font-medium leading-relaxed text-body-color border-t border-body-color/10 pt-5 dark:border-white/10">
-                专为生命科学领域设计的智能对话助手，深度理解生物学语义，助力科研探索。
+                {t("card1_desc")}
               </p>
             </div>
           </div>
@@ -62,14 +65,14 @@ const GneroAIContent = () => {
                   </svg>
                 </div>
                 <span className="inline-flex items-center rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-xs font-bold text-primary backdrop-blur-md">
-                  推理驱动
+                  {t("tag2")}
                 </span>
               </div>
               <h3 className="relative z-10 mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl transition-colors group-hover:text-primary">
-                GneroAI Agent
+                {t("card2_title")}
               </h3>
               <p className="relative z-10 text-base font-medium leading-relaxed text-body-color border-t border-body-color/10 pt-5 dark:border-white/10">
-                自动化的生信流程执行代理，智能管理任务流，实现零代码复杂数据分析。
+                {t("card2_desc")}
               </p>
             </div>
           </div>
@@ -93,14 +96,14 @@ const GneroAIContent = () => {
                   </svg>
                 </div>
                 <span className="inline-flex items-center rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-xs font-bold text-primary backdrop-blur-md">
-                  模块化 AI
+                  {t("tag3")}
                 </span>
               </div>
               <h3 className="relative z-10 mb-5 text-xl font-bold text-black dark:text-white sm:text-2xl lg:text-xl xl:text-2xl transition-colors group-hover:text-primary">
-                GneroAI Skills
+                {t("card3_title")}
               </h3>
               <p className="relative z-10 text-base font-medium leading-relaxed text-body-color border-t border-body-color/10 pt-5 dark:border-white/10">
-                模块化的 AI 技能插件库，快速为现有系统赋能，灵活应对多样化场景需求。
+                {t("card3_desc")}
               </p>
             </a>
           </div>
@@ -109,7 +112,7 @@ const GneroAIContent = () => {
         <div className="relative z-20 mt-20 text-center">
           <div className="inline-block rounded-full bg-gradient-to-r from-transparent via-primary/20 to-transparent px-8 py-3 backdrop-blur-sm border border-primary/10 text-lg font-semibold text-primary/80 dark:text-primary shadow-[0_0_30px_rgba(74,108,247,0.1)]">
             <span className="animate-pulse mr-2 inline-block h-2 w-2 rounded-full bg-primary"></span>
-            更多 AI 产品矩阵持续构建中，期待与您共同见证生命科学的智能化未来
+            {t("footer")}
             <span className="animate-pulse ml-2 inline-block h-2 w-2 rounded-full bg-primary"></span>
           </div>
         </div>

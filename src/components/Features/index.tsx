@@ -1,8 +1,12 @@
 import SectionTitle from "../Common/SectionTitle";
 import SingleFeature from "./SingleFeature";
 import featuresData from "./featuresData";
+import { useTranslations } from "next-intl";
 
 const Features = () => {
+  const t = useTranslations("Features");
+  const data = featuresData(t);
+
   return (
     <>
       <section id="features" className="relative z-10 overflow-hidden py-16 md:py-20 lg:py-28">
@@ -12,17 +16,17 @@ const Features = () => {
 
         <div className="container relative z-20">
           <SectionTitle
-            title="GneroAI 一个平台无限可能"
+            title={t("title")}
             paragraph={
               <>
-                以 <span className="text-primary font-bold">GneroAI</span> 为核心，深度融合多组学、生物计算与智能分析能力，为生命科学研究与产业创新提供一体化智能平台。
+                {t("paragraph_part1")} <span className="text-primary font-bold">{t("paragraph_highlight")}</span> {t("paragraph_part2")}
               </>
             }
             center
           />
 
           <div className="grid grid-cols-1 gap-x-8 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
-            {featuresData.map((feature) => (
+            {data.map((feature) => (
               <SingleFeature key={feature.id} feature={feature} />
             ))}
           </div>

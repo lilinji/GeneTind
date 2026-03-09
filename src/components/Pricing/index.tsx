@@ -3,8 +3,10 @@ import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import { useTranslations } from "next-intl";
 
 const Pricing = () => {
+  const t = useTranslations("Pricing");
 
   return (
     <section id="pricing" className="relative z-10 overflow-hidden py-16 md:py-20 lg:py-28">
@@ -15,8 +17,8 @@ const Pricing = () => {
 
       <div className="container relative z-20">
         <SectionTitle
-          title="GneroAI 订阅方案"
-          paragraph="针对不同规模企业的智能化需求，提供从基础对话到全能平台的灵活选择。"
+          title={t("title")}
+          paragraph={t("paragraph")}
           center
           width="665px"
         />
@@ -24,36 +26,36 @@ const Pricing = () => {
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
           <PricingBox
             packageName="Lite"
-            subtitle="基础 AI 对话与知识库助手"
+            subtitle={t("lite_subtitle")}
           >
-            <OfferList text="GneroAI Chat 基础版" status="active" />
-            <OfferList text="企业知识库接入" status="active" />
-            <OfferList text="多轮对话支持" status="active" />
-            <OfferList text="标准响应速度" status="active" />
-            <OfferList text="自动化任务执行" status="inactive" />
-            <OfferList text="GTC-Skills 定制平台" status="inactive" />
+            <OfferList text={t("lite_f1")} status="active" />
+            <OfferList text={t("lite_f2")} status="active" />
+            <OfferList text={t("lite_f3")} status="active" />
+            <OfferList text={t("lite_f4")} status="active" />
+            <OfferList text={t("lite_f5")} status="inactive" />
+            <OfferList text={t("lite_f6")} status="inactive" />
           </PricingBox>
           <PricingBox
             packageName="Basic Plus"
-            subtitle="智能 Agent 自动化执行"
+            subtitle={t("basic_subtitle")}
           >
-            <OfferList text="包含 Lite 版所有功能" status="active" />
-            <OfferList text="GTC-Agent 智能体" status="active" />
-            <OfferList text="自动化任务执行" status="active" />
-            <OfferList text="复杂流程编排" status="active" />
-            <OfferList text="优先技术支持" status="active" />
-            <OfferList text="GTC-Skills 定制平台" status="inactive" />
+            <OfferList text={t("basic_f1")} status="active" />
+            <OfferList text={t("basic_f2")} status="active" />
+            <OfferList text={t("basic_f3")} status="active" />
+            <OfferList text={t("basic_f4")} status="active" />
+            <OfferList text={t("basic_f5")} status="active" />
+            <OfferList text={t("basic_f6")} status="inactive" />
           </PricingBox>
           <PricingBox
             packageName="GneroAI Platform"
-            subtitle="全能型企业 AI 解决方案"
+            subtitle={t("platform_subtitle")}
           >
-            <OfferList text="包含 Basic Plus 所有功能" status="active" />
-            <OfferList text="GTC-Skills 定制平台" status="active" />
-            <OfferList text="私有化部署支持" status="active" />
-            <OfferList text="API 深度集成" status="active" />
-            <OfferList text="专属客户经理" status="active" />
-            <OfferList text="全功能解锁" status="active" />
+            <OfferList text={t("platform_f1")} status="active" />
+            <OfferList text={t("platform_f2")} status="active" />
+            <OfferList text={t("platform_f3")} status="active" />
+            <OfferList text={t("platform_f4")} status="active" />
+            <OfferList text={t("platform_f5")} status="active" />
+            <OfferList text={t("platform_f6")} status="active" />
           </PricingBox>
         </div>
       </div>

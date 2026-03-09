@@ -1,8 +1,12 @@
 import { Inter, Outfit } from "next/font/google";
 import { Metadata } from "next";
 import Script from "next/script";
-import "../styles/index.css";
+import "../../styles/index.css";
 import ClientLayout from "./ClientLayout";
+import { NextIntlClientProvider } from 'next-intl';
+import { getMessages } from 'next-intl/server';
+import { notFound } from 'next/navigation';
+import { routing } from '@/i18n/routing';
 
 const inter = Inter({ subsets: ["latin"] });
 const outfit = Outfit({ subsets: ["latin"] });
@@ -22,17 +26,27 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
+export default async function RootLayout(props: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  const params = await props.params;
+  const { locale } = params;
+  
+  if (!routing.locales.includes(locale as any)) {
+    notFound();
+  }
+
+  const messages = await getMessages();
+
   return (
-    <html suppressHydrationWarning lang="zh-CN">
+    <html suppressHydrationWarning lang={locale}>
       <head />
       <body className={`bg-[#FCFCFC] dark:bg-black ${outfit.className}`}>
         <Script defer src="https://cloud.umami.is/script.js" data-website-id="7d79219d-6f80-412c-b896-2d508b01940a" />
-        <ClientLayout>{children}</ClientLayout>
+        <NextIntlClientProvider messages={messages}>
+          <ClientLayout>{props.children}</ClientLayout>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,8 +1,10 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 const Footer = () => {
+  const t = useTranslations("Footer");
   return (
     <>
       <footer className="relative z-10 bg-white pt-16 dark:bg-gray-dark md:pt-20 lg:pt-24">
@@ -27,7 +29,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="mb-9 text-base leading-relaxed text-body-color dark:text-body-color-dark">
-                  吉因丰科技是一家以数据服务为核心的技术型公司，主要经营数据信息服务企业核心目标让数据解码基因，推动精准医疗、生命科学及人工智能新发展
+                  {t("company_desc")}
                 </p>
                 <div className="flex items-center">
                   <a
@@ -111,7 +113,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Company
+                  {t("company")}
                 </h2>
                 <ul>
                   <li>
@@ -119,7 +121,7 @@ const Footer = () => {
                       href="/about"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      关于我们
+                      {t("about_us")}
                     </Link>
                   </li>
                   <li>
@@ -127,7 +129,7 @@ const Footer = () => {
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      团队成员
+                      {t("team")}
                     </Link>
                   </li>
                   <li>
@@ -135,7 +137,7 @@ const Footer = () => {
                       href="/contact"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      联系我们
+                      {t("contact_us")}
                     </Link>
                   </li>
                 </ul>
@@ -145,7 +147,7 @@ const Footer = () => {
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Community
+                  {t("community")}
                 </h2>
                 <ul>
                   <li>
@@ -163,19 +165,19 @@ const Footer = () => {
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
                 <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
-                  Contact Info
+                  {t("contact_info")}
                 </h2>
                 <ul>
                   <li className="mb-4 text-base text-body-color dark:text-body-color-dark">
-                    <h4 className="font-semibold text-black dark:text-white">地址(Address):</h4>
-                    <p>天津市空港经济区 西七道28号</p>
+                    <h4 className="font-semibold text-black dark:text-white">{t("address_label")}</h4>
+                    <p>{t("address_value")}</p>
                   </li>
                   <li className="mb-4 text-base text-body-color dark:text-body-color-dark">
-                    <h4 className="font-semibold text-black dark:text-white">Email:</h4>
+                    <h4 className="font-semibold text-black dark:text-white">{t("email_label")}</h4>
                     <p>support@genetind.com</p>
                   </li>
                   <li className="mb-4 text-base text-body-color dark:text-body-color-dark">
-                    <h4 className="font-semibold text-black dark:text-white">Phone:</h4>
+                    <h4 className="font-semibold text-black dark:text-white">{t("phone_label")}</h4>
                     <p>+86 186 6537 9896</p>
                   </li>
                 </ul>
@@ -186,7 +188,7 @@ const Footer = () => {
           <div className="h-px w-full bg-linear-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-              Copyright &copy; 2025.GeneTind All rights reserved.{" "}
+              {t("copyright")}
               <a
                 href="http://beian.miit.gov.cn/"
                 target="_blank"
