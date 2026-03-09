@@ -76,7 +76,13 @@ const GneroAIContent = () => {
 
           {/* Card 3 */}
           <div className="w-full group">
-            <div className="relative h-full z-10 rounded-2xl bg-white/60 dark:bg-gray-dark/50 backdrop-blur-xl border border-white/20 dark:border-white/10 p-8 shadow-two duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_-10px_rgba(74,108,247,0.4)] sm:p-11 lg:p-8 xl:p-11 overflow-hidden" data-wow-delay=".2s">
+            <a 
+              href="https://github.com/lilinji/GeneTind-Life-Skills"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block relative h-full z-10 rounded-2xl bg-white/60 dark:bg-gray-dark/50 backdrop-blur-xl border border-white/20 dark:border-white/10 p-8 shadow-two duration-500 hover:-translate-y-2 hover:shadow-[0_0_40px_-10px_rgba(74,108,247,0.4)] sm:p-11 lg:p-8 xl:p-11 overflow-hidden cursor-pointer" 
+              data-wow-delay=".2s"
+            >
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
               <div className="relative z-10 mb-8 flex items-center justify-between">
@@ -96,7 +102,7 @@ const GneroAIContent = () => {
               <p className="relative z-10 text-base font-medium leading-relaxed text-body-color border-t border-body-color/10 pt-5 dark:border-white/10">
                 模块化的 AI 技能插件库，快速为现有系统赋能，灵活应对多样化场景需求。
               </p>
-            </div>
+            </a>
           </div>
         </div>
 

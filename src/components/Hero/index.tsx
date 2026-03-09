@@ -1,6 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import { useState, useEffect } from "react";
 
 const Hero = () => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentSlide((prev) => (prev === 0 ? 1 : 0));
+    }, 6000);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <>
       <section
@@ -10,29 +22,82 @@ const Hero = () => {
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  生命科学IT数据分析全景解决方案
-                  <br />
-                  Life Science IT Data Analysis Panorama Solution
-                </h1>
-                <p className="mb-12 text-base font-bold leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                  Genetind 是一家以数据服务为核心的技术型公司，主要经营数据信息服务企业核心目标让数据解码基因，推动精准医疗、生命科学及人工智能新发展
-                </p>
-                <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
-                    href="https://gneroai.genetind.com"
-                    className="rounded-xs bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+              <div className="mx-auto max-w-[800px] text-center relative">
+                
+                {/* Carousel Tracks / Content */}
+                <div className="grid items-center justify-items-center">
+                  {/* Slide 1 */}
+                  <div 
+                    className={`col-start-1 row-start-1 w-full flex flex-col items-center justify-center transition-all duration-1000 ease-in-out ${
+                      currentSlide === 0 ? "opacity-100 translate-y-0 pointer-events-auto z-10" : "opacity-0 -translate-y-8 pointer-events-none z-0"
+                    }`}
                   >
-                    🔥 Get Pro
-                  </Link>
-                  <Link
-                    href="https://github.com/lilinji/gneroai"
-                    className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                    <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                      生命科学IT数据分析全景解决方案
+                      <br />
+                      Life Science IT Data Analysis Panorama Solution
+                    </h1>
+                    <p className="mb-12 text-base font-bold leading-relaxed! text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
+                      Genetind 是一家以数据服务为核心的技术型公司，主要经营数据信息服务企业核心目标让数据解码基因，推动精准医疗、生命科学及人工智能新发展
+                    </p>
+                    <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                      <Link
+                        href="https://gneroai.genetind.com"
+                        className="rounded-xs bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                      >
+                        🔥 Get Pro
+                      </Link>
+                      <Link
+                        href="https://github.com/lilinji/gneroai"
+                        className="inline-block rounded-xs bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                      >
+                        Star on GitHub
+                      </Link>
+                    </div>
+                  </div>
+
+                  {/* Slide 2 (ClawBio Design Replica) */}
+                  <div 
+                    className={`col-start-1 row-start-1 w-full flex flex-col items-center justify-center transition-all duration-1000 ease-in-out ${
+                      currentSlide === 1 ? "opacity-100 translate-y-0 pointer-events-auto z-10" : "opacity-0 translate-y-8 pointer-events-none z-0"
+                    }`}
                   >
-                    Star on GitHub
-                  </Link>
+                    <div className="mb-6 inline-flex items-center rounded-full border border-green-600/30 dark:border-green-800/50 bg-green-500/10 px-4 py-1.5 text-xs font-semibold tracking-widest text-green-700 dark:text-[#4ade80] sm:text-[10px] md:text-xs">
+                      1000 STARS ·1000+ SKILLS · 2,617 UNIQUE VISITORS · 1 WEEK OLD
+                    </div>
+                    <h1 className="mb-5 text-3xl font-extrabold tracking-tight leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                      The first <span className="text-green-600 dark:text-[#4ade80]">bioinformatics-AI</span>
+                      <br />
+                      AI agent skill library
+                    </h1>
+                    <p className="mb-12 text-base font-medium leading-relaxed text-body-color dark:text-gray-400 sm:text-lg md:text-xl max-w-[600px]">
+                      GeneTind-Life-Skills is where biological AI gets its skills: a curated, reproducible, open repository any agent can call.
+                    </p>
+                    <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                      <Link
+                        href="https://github.com/lilinji/GeneTind-Life-Skills"
+                        className="rounded-xs bg-green-600 px-8 py-4 text-base font-semibold text-white dark:bg-[#4ade80] dark:text-black duration-300 ease-in-out hover:bg-green-700 dark:hover:bg-[#22c55e]"
+                      >
+                        Explore Skills
+                      </Link>
+                    </div>
+                  </div>
                 </div>
+
+                {/* Carousel Pagination Dots */}
+                <div className="mt-14 flex items-center justify-center space-x-3">
+                  <button 
+                    onClick={() => setCurrentSlide(0)} 
+                    aria-label="Go to slide 1"
+                    className={`h-2.5 rounded-full transition-all duration-300 ease-out ${currentSlide === 0 ? "bg-primary w-8" : "bg-body-color/30 dark:bg-white/20 w-2.5 hover:bg-body-color/50 dark:hover:bg-white/40"}`}
+                  ></button>
+                  <button 
+                    onClick={() => setCurrentSlide(1)} 
+                    aria-label="Go to slide 2"
+                    className={`h-2.5 rounded-full transition-all duration-300 ease-out ${currentSlide === 1 ? "bg-green-600 dark:bg-[#4ade80] w-8" : "bg-body-color/30 dark:bg-white/20 w-2.5 hover:bg-body-color/50 dark:hover:bg-white/40"}`}
+                  ></button>
+                </div>
+
               </div>
             </div>
           </div>
