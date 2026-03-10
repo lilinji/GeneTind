@@ -20,7 +20,20 @@
     "slide2_title_highlight": "bioinformatics-AI",
     "slide2_title_2": "AI agent skill library",
     "slide2_paragraph": "GeneTind-Life-Skills is where biological AI gets its skills: a curated, reproducible, open repository any agent can call.",
-    "exploreSkills": "Explore Skills"
+    "exploreSkills": "Explore Skills",
+    "slide3_badge": "7-DAY COURSE · OPEN SOURCE · OPENCLAW",
+    "slide3_title_1": "7-Day GeneTind",
+    "slide3_title_highlight": "OpenClaw",
+    "slide3_title_2": "Course",
+    "slide3_subtitle": "Build from zero and master your AI personal assistant in 7 days.",
+    "slide3_paragraph": "The open-source guide to building your AI assistant with OpenClaw.",
+    "slide3_cta": "Explore OpenClaw",
+    "slide3_chip_1": "Zero to One",
+    "slide3_chip_2": "7-Day Sprint",
+    "slide3_chip_3": "Open Source",
+    "goToSlide1": "Go to slide 1",
+    "goToSlide2": "Go to slide 2",
+    "goToSlide3": "Go to slide 3"
   },
   "Features": {
     "title": "GneroAI: One Platform, Infinite Possibilities",

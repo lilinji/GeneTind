@@ -20,7 +20,20 @@
     "slide2_title_highlight": "生物信息学 AI",
     "slide2_title_2": "AI Agent 技能库",
     "slide2_paragraph": "GeneTind-Life-Skills 是生物 AI 获取技能的地方：一个经过精心整理、可复现、开源的技能仓库，任何 AI Agent 都可以调用。",
-    "exploreSkills": "探索技能" 
+    "exploreSkills": "探索技能",
+    "slide3_badge": "7天课程 · 开源指南 · OPENCLAW",
+    "slide3_title_1": "7天 GeneTind",
+    "slide3_title_highlight": "OpenClaw",
+    "slide3_title_2": "课程",
+    "slide3_subtitle": "从零开始，7天掌握你的 AI 私人助理",
+    "slide3_paragraph": "使用 OpenClaw 构建你的 AI 私人助理的开源指南。",
+    "slide3_cta": "探索 OpenClaw",
+    "slide3_chip_1": "零基础起步",
+    "slide3_chip_2": "7天上手",
+    "slide3_chip_3": "开源实战",
+    "goToSlide1": "切换到第 1 张",
+    "goToSlide2": "切换到第 2 张",
+    "goToSlide3": "切换到第 3 张"
   },
   "Features": {
     "title": "GneroAI 一个平台无限可能",
