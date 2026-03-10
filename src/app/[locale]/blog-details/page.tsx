@@ -1,16 +1,21 @@
 import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import Image from "next/image";
-
+import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Details Page for Startup Nextjs Template",
-  // other metadata
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "BlogDetails" });
+  return {
+    title: t("meta_title", { fallback: "Blog Details | GeneTind" }),
+    description: t("meta_description", { fallback: "Detailed blog post from GeneTind." }),
+  };
+}
 
 const BlogDetailsPage = () => {
+  const t = useTranslations("BlogDetails");
   return (
     <>
       <section className="pt-[150px] pb-[120px]">
@@ -36,7 +41,7 @@ const BlogDetailsPage = () => {
                       </div>
                       <div className="w-full">
                         <span className="text-body-color mb-1 text-base font-medium">
-                          By <span>Musharof Chy</span>
+                          {t("by")} <span>Musharof Chy</span>
                         </span>
                       </div>
                     </div>
@@ -98,7 +103,7 @@ const BlogDetailsPage = () => {
                       href="#0"
                       className="bg-primary inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-white"
                     >
-                      Design
+                      {t("design")}
                     </a>
                   </div>
                 </div>
@@ -317,17 +322,17 @@ const BlogDetailsPage = () => {
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
                       <h4 className="text-body-color mb-3 text-sm font-medium">
-                        Popular Tags :
+                        {t("popularTags")}
                       </h4>
                       <div className="flex items-center">
-                        <TagButton text="Design" />
-                        <TagButton text="Development" />
-                        <TagButton text="Info" />
+                        <TagButton text={t("design")} />
+                        <TagButton text={t("development")} />
+                        <TagButton text={t("info")} />
                       </div>
                     </div>
                     <div className="mb-5">
                       <h5 className="text-body-color mb-3 text-sm font-medium sm:text-right">
-                        Share this post :
+                        {t("sharePost")}
                       </h5>
                       <div className="flex items-center sm:justify-end">
                         <SharePost />

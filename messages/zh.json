@@ -151,5 +151,87 @@
     "description": "以 GneroAI 为核心，深度融合多组学、生物计算与智能分析能力，为生命科学研究与产业创新提供一体化智能平台。",
     "doc_link": "进入文档",
     "secret_link": "✨ 神秘功能"
+  },
+  "Signin": {
+    "meta_title": "登录 | 吉因丰科技 (GeneTind)",
+    "meta_description": "登录您的账户以访问更多功能。",
+    "title": "登录您的账户",
+    "subtitle": "登录您的账户以获得更快的结账体验。",
+    "google_signin": "使用 Google 登录",
+    "github_signin": "使用 Github 登录",
+    "email_signin_separator": "或者，使用您的电子邮箱登录",
+    "email_label": "您的邮箱",
+    "email_placeholder": "输入您的邮箱",
+    "password_label": "您的密码",
+    "password_placeholder": "输入您的密码",
+    "remember_me": "保持登录状态",
+    "forgot_password": "忘记密码？",
+    "signin_button": "登录",
+    "no_account": "还没有账户？",
+    "signup_link": "注册"
+  },
+  "Signup": {
+    "meta_title": "注册 | 吉因丰科技 (GeneTind)",
+    "meta_description": "创建一个新账户以开始使用。",
+    "title": "创建您的账户",
+    "subtitle": "完全免费且非常简单",
+    "google_signin": "使用 Google 登录",
+    "github_signin": "使用 Github 登录",
+    "email_signup_separator": "或者，使用您的电子邮箱注册",
+    "name_label": "全名",
+    "name_placeholder": "输入您的全名",
+    "email_label": "工作邮箱",
+    "email_placeholder": "输入您的邮箱",
+    "password_label": "您的密码",
+    "password_placeholder": "输入您的密码",
+    "terms_condition_prefix": "创建账户即表示您同意我们的",
+    "terms_link": "条款和条件",
+    "terms_middle": "以及我们的",
+    "privacy_link": "隐私政策",
+    "signup_button": "注册",
+    "already_user": "已经在使用 GeneTind？",
+    "signin_link": "登录"
+  },
+  "Blog": {
+    "meta_title": "博客 | 吉因丰科技 (GeneTind)",
+    "meta_description": "阅读吉因丰科技的最新动态、技术分享与行业洞察。",
+    "pageName": "博客文章",
+    "description": "在这里探索生命科学与 AI 交汇的最前沿资讯。通过我们的技术专栏，了解如何利用数据驱动科研创新。",
+    "prev": "上一页",
+    "next": "下一页",
+    "read_more": "阅读更多",
+    "post1_title": "现代网站的最佳 UI 组件",
+    "post1_para": "探索如何为高要求的科研平台构建既美观又高性能的用户界面。",
+    "post2_title": "提高设计能力的 9 个简单方法",
+    "post2_para": "优秀的设计不仅关乎美观，更关乎如何更清晰地传递复杂的生物学数据。",
+    "post3_title": "快速提高编码速度的技巧",
+    "post3_para": "利用 AI 工具和优化的工作流，显著提升生信流程的开发与部署效率。"
+  },
+  "BlogDetails": {
+    "popularTags": "热门标签 :",
+    "sharePost": "分享此文 :",
+    "by": "作者",
+    "design": "设计",
+    "development": "开发",
+    "info": "资讯"
+  },
+  "Error": {
+    "meta_title": "404 页面未找到 | 吉因丰科技 (GeneTind)",
+    "meta_description": "抱歉，您访问的页面不存在或已被移除。",
+    "title": "抱歉，无法找到该页面",
+    "subtitle": "您正在寻找的页面似乎已被移动、删除或根本不存在。",
+    "back_home": "返回首页"
+  },
+  "BlogSidebar": {
+    "search_placeholder": "在此搜索...",
+    "related_posts": "相关文章",
+    "popular_category": "热门分类",
+    "popular_tags": "热门标签"
+  },
+  "NewsLatter": {
+    "title": "订阅我们的新闻通讯",
+    "subtitle": "直接在您的收件箱中获取最新的资讯。不发垃圾邮件。",
+    "email_placeholder": "输入您的邮箱",
+    "subscribe_button": "订阅"
   }
 }

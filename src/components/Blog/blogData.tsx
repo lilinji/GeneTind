@@ -1,11 +1,10 @@
 import { Blog } from "@/types/blog";
 
-const blogData: Blog[] = [
+const getBlogData = (t: any): Blog[] => [
   {
     id: 1,
-    title: "Best UI components for modern websites",
-    paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+    title: t("post1_title"),
+    paragraph: t("post1_para"),
     image: "/images/blog/blog-01.jpg",
     author: {
       name: "Samuyl Joshi",
@@ -17,9 +16,8 @@ const blogData: Blog[] = [
   },
   {
     id: 2,
-    title: "9 simple ways to improve your design skills",
-    paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+    title: t("post2_title"),
+    paragraph: t("post2_para"),
     image: "/images/blog/blog-02.jpg",
     author: {
       name: "Musharof Chy",
@@ -31,9 +29,8 @@ const blogData: Blog[] = [
   },
   {
     id: 3,
-    title: "Tips to quickly improve your coding speed.",
-    paragraph:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras sit amet dictum neque, laoreet dolor.",
+    title: t("post3_title"),
+    paragraph: t("post3_para"),
     image: "/images/blog/blog-03.jpg",
     author: {
       name: "Lethium Deo",
@@ -44,4 +41,5 @@ const blogData: Blog[] = [
     publishDate: "2025",
   },
 ];
-export default blogData;
+
+export default getBlogData;

@@ -151,5 +151,87 @@
     "description": "With GneroAI at its core, it deeply integrates multi-omics, biological computing, and intelligent analysis capabilities to provide an all-in-one AI platform for life science research and industrial innovation.",
     "doc_link": "Documentation",
     "secret_link": "✨ Secret Feature"
+  },
+  "Signin": {
+    "meta_title": "Sign In | GeneTind",
+    "meta_description": "Sign in to your account to access advanced AI capabilities.",
+    "title": "Sign in to your account",
+    "subtitle": "Log in to your account for a more personalized experience.",
+    "google_signin": "Sign in with Google",
+    "github_signin": "Sign in with Github",
+    "email_signin_separator": "Or, sign in with your email",
+    "email_label": "Your Email",
+    "email_placeholder": "Enter your email",
+    "password_label": "Your Password",
+    "password_placeholder": "Enter your password",
+    "remember_me": "Keep me signed in",
+    "forgot_password": "Forgot Password?",
+    "signin_button": "Sign in",
+    "no_account": "Don’t you have an account?",
+    "signup_link": "Sign up"
+  },
+  "Signup": {
+    "meta_title": "Sign Up | GeneTind",
+    "meta_description": "Create a new account and start exploring biological AI skills.",
+    "title": "Create your account",
+    "subtitle": "It’s totally free and super easy",
+    "google_signin": "Sign in with Google",
+    "github_signin": "Sign in with Github",
+    "email_signup_separator": "Or, register with your email",
+    "name_label": "Full Name",
+    "name_placeholder": "Enter your full name",
+    "email_label": "Work Email",
+    "email_placeholder": "Enter your email",
+    "password_label": "Your Password",
+    "password_placeholder": "Enter your password",
+    "terms_condition_prefix": "By creating account means you agree to the",
+    "terms_link": "Terms and Conditions",
+    "terms_middle": ", and our",
+    "privacy_link": "Privacy Policy",
+    "signup_button": "Sign up",
+    "already_user": "Already using GeneTind?",
+    "signin_link": "Sign in"
+  },
+  "Blog": {
+    "meta_title": "Blog | GeneTind",
+    "meta_description": "Explore the latest updates, technical insights, and industry trends from GeneTind.",
+    "pageName": "Our Blog",
+    "description": "Discover the intersection of Life Sciences and AI. Read our latest articles on how data drives scientific innovation.",
+    "prev": "Prev",
+    "next": "Next",
+    "read_more": "Read More",
+    "post1_title": "Best UI components for modern websites",
+    "post1_para": "Discover how to build beautiful and high-performance interfaces for demanding scientific platforms.",
+    "post2_title": "9 simple ways to improve your design skills",
+    "post2_para": "Great design is not just about aesthetics, but about clearly conveying complex biological data.",
+    "post3_title": "Tips to quickly improve your coding speed.",
+    "post3_para": "Leverage AI tools and optimized workflows to significantly boost your bioinformatics development efficiency."
+  },
+  "BlogDetails": {
+    "popularTags": "Popular Tags :",
+    "sharePost": "Share this post :",
+    "by": "By",
+    "design": "Design",
+    "development": "Development",
+    "info": "Info"
+  },
+  "Error": {
+    "meta_title": "404 Page Not Found | GeneTind",
+    "meta_description": "The page you are looking for does not exist or has been moved.",
+    "title": "Sorry, the page can’t be found",
+    "subtitle": "The page you were looking for appears to have been moved, deleted or does not exist.",
+    "back_home": "Back to Homepage"
+  },
+  "BlogSidebar": {
+    "search_placeholder": "Search here...",
+    "related_posts": "Related Posts",
+    "popular_category": "Popular Category",
+    "popular_tags": "Popular Tags"
+  },
+  "NewsLatter": {
+    "title": "Subscribe to our Newsletter",
+    "subtitle": "Get the latest updates right in your inbox. No spamming.",
+    "email_placeholder": "Enter your email",
+    "subscribe_button": "Subscribe"
   }
 }

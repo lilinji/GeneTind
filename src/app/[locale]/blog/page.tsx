@@ -1,21 +1,28 @@
 import SingleBlog from "@/components/Blog/SingleBlog";
-import blogData from "@/components/Blog/blogData";
+import getBlogData from "@/components/Blog/blogData";
 import Breadcrumb from "@/components/Common/Breadcrumb";
-
+import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Blog Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Page for Startup Nextjs Template",
-  // other metadata
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Blog" });
+  return {
+    title: t("meta_title"),
+    description: t("meta_description"),
+  };
+}
 
 const Blog = () => {
+  const t = useTranslations("Blog");
+  const blogData = getBlogData(t);
+
   return (
     <>
       <Breadcrumb
-        pageName="Blog Grid"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        pageName={t("pageName")}
+        description={t("description")}
       />
 
       <section className="pt-[120px] pb-[120px]">
@@ -39,7 +46,7 @@ const Blog = () => {
                     href="#0"
                     className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
                   >
-                    Prev
+                    {t("prev")}
                   </a>
                 </li>
                 <li className="mx-1">
@@ -84,7 +91,7 @@ const Blog = () => {
                     href="#0"
                     className="bg-body-color/15 text-body-color hover:bg-primary flex h-9 min-w-[36px] items-center justify-center rounded-md px-4 text-sm transition hover:text-white"
                   >
-                    Next
+                    {t("next")}
                   </a>
                 </li>
               </ul>

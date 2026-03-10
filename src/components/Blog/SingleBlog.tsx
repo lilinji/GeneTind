@@ -1,8 +1,10 @@
 import { Blog } from "@/types/blog";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
+  const t = useTranslations("Blog");
   const { title, image, paragraph, author, tags, publishDate } = blog;
   return (
     <>
@@ -37,14 +39,14 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
               </div>
               <div className="w-full">
                 <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
-                  By {author.name}
+                  {author.name}
                 </h4>
                 <p className="text-body-color text-xs">{author.designation}</p>
               </div>
             </div>
             <div className="inline-block">
               <h4 className="text-dark mb-1 text-sm font-medium dark:text-white">
-                Date
+                {publishDate}
               </h4>
               <p className="text-body-color text-xs">{publishDate}</p>
             </div>
