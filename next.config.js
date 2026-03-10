@@ -13,6 +13,9 @@ const nextConfig = {
       },
     ],
   },
+  env: {
+    BASELINE_BROWSER_MAPPING_IGNORE_OLD_DATA: "true",
+  },
 };
 
 module.exports = withNextIntl(nextConfig);
