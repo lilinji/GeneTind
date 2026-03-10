@@ -125,5 +125,31 @@
     "card3_title": "GneroAI Skills",
     "card3_desc": "Modular AI skill plugins empowering legacy systems and adapting to diverse scenario requirements rapidly.",
     "footer": "More AI products in our matrix are continuously being built. Look forward to witnessing the intelligent future of life sciences with you."
+  },
+  "ContactPage": {
+    "meta_title": "Contact Us | GeneTind",
+    "meta_description": "If you have any questions or need technical support, please feel free to contact us. Our team is dedicated to serving you.",
+    "pageName": "Contact Us",
+    "description": "If you have any questions or need technical support, please feel free to contact us. Our team is dedicated to serving you."
+  },
+  "AboutPage": {
+    "meta_title": "About Us | GeneTind",
+    "meta_description": "GeneTind is a technology-driven company centered on data services, dedicated to driving advancements in life sciences, precision medicine, and AI.",
+    "pageName": "About Us",
+    "quote": "“Delivering cutting-edge Life Sciences IT solutions to power your business.”",
+    "intro_1": "GeneTind",
+    "intro_2": " is a technological innovation force centered on data services, dedicated to decoding genes through data and driving the deep integration of AI and precision medicine.",
+    "card1": "GneroAI-HPC (AI/HPC Platform)",
+    "card2": "GneroAI-ALL (Enterprise AI Platform)",
+    "card3": "GneroAI-Lab (Enterprise AI Omics Platform)",
+    "call_anytime": "Call Anytime:"
+  },
+  "GneroAIPage": {
+    "meta_title": "GneroAI | GeneTind AI",
+    "meta_description": "Explore the infinite possibilities of GneroAI. We provide the most advanced AI solutions for life sciences, including intelligent chat, bioinformatics agents, and modular AI skill libraries.",
+    "pageName": "GneroAI Intelligent Platform",
+    "description": "With GneroAI at its core, it deeply integrates multi-omics, biological computing, and intelligent analysis capabilities to provide an all-in-one AI platform for life science research and industrial innovation.",
+    "doc_link": "Documentation",
+    "secret_link": "✨ Secret Feature"
   }
 }

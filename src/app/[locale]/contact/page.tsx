@@ -1,20 +1,25 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import Contact from "@/components/Contact";
-
+import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "联系我们 | 吉因丰科技 (GeneTind)",
-  description: "如果您有任何疑问或需要技术支持，请随时与我们联系。我们的团队将竭诚为您服务。",
-  // other metadata
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "ContactPage" });
+  return {
+    title: t("meta_title"),
+    description: t("meta_description"),
+  };
+}
 
 const ContactPage = () => {
+  const t = useTranslations("ContactPage");
   return (
     <>
       <Breadcrumb
-        pageName="联系我们"
-        description="如果您有任何疑问或需要技术支持，请随时与我们联系。我们的团队将竭诚为您服务。"
+        pageName={t("pageName")}
+        description={t("description")}
       />
 
       <Contact />

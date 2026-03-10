@@ -15,12 +15,12 @@
     "paragraph": "Genetind 是一家以数据服务为核心的技术型公司，主要经营数据信息服务企业核心目标让数据解码基因，推动精准医疗、生命科学及人工智能新发展",
     "getPro": "🔥 Get Pro",
     "starOnGithub": "Star on GitHub",
-    "slide2_tags": "1000 STARS ·1000+ SKILLS · 2,617 UNIQUE VISITORS · 1 WEEK OLD",
-    "slide2_title_1": "The first",
-    "slide2_title_highlight": "bioinformatics-AI",
-    "slide2_title_2": "AI agent skill library",
-    "slide2_paragraph": "GeneTind-Life-Skills is where biological AI gets its skills: a curated, reproducible, open repository any agent can call.",
-    "exploreSkills": "Explore Skills"
+    "slide2_tags": "1000 星标 · 1000+ 技能 · 2,617 位独立访客 · 上线 仅1 周",
+    "slide2_title_1": "首个",
+    "slide2_title_highlight": "生物信息学 AI",
+    "slide2_title_2": "AI Agent 技能库",
+    "slide2_paragraph": "GeneTind-Life-Skills 是生物 AI 获取技能的地方：一个经过精心整理、可复现、开源的技能仓库，任何 AI Agent 都可以调用。",
+    "exploreSkills": "探索技能" 
   },
   "Features": {
     "title": "GneroAI 一个平台无限可能",
@@ -100,16 +100,16 @@
   },
   "Footer": {
     "company_desc": "吉因丰科技是一家以数据服务为核心的技术型公司，主要经营数据信息服务企业核心目标让数据解码基因，推动精准医疗、生命科学及人工智能新发展",
-    "company": "Company",
+    "company": "公司",
     "about_us": "关于我们",
     "team": "团队成员",
     "contact_us": "联系我们",
-    "community": "Community",
-    "contact_info": "Contact Info",
-    "address_label": "地址(Address):",
+    "community": "社区",
+    "contact_info": "联系我们",
+    "address_label": "地址:",
     "address_value": "天津市空港经济区 西七道28号",
-    "email_label": "Email:",
-    "phone_label": "Phone:",
+    "email_label": "邮箱:",
+    "phone_label": "电话:",
     "copyright": "Copyright © 2025.GeneTind All rights reserved. "
   },
   "GneroAI": {
@@ -125,5 +125,31 @@
     "card3_title": "GneroAI Skills",
     "card3_desc": "模块化的 AI 技能插件库，快速为现有系统赋能，灵活应对多样化场景需求。",
     "footer": "更多 AI 产品矩阵持续构建中，期待与您共同见证生命科学的智能化未来"
+  },
+  "ContactPage": {
+    "meta_title": "联系我们 | 吉因丰科技 (GeneTind)",
+    "meta_description": "如果您有任何疑问或需要技术支持，请随时与我们联系。我们的团队将竭诚为您服务。",
+    "pageName": "联系我们",
+    "description": "如果您有任何疑问或需要技术支持，请随时与我们联系。我们的团队将竭诚为您服务。"
+  },
+  "AboutPage": {
+    "meta_title": "关于我们 | 吉因丰科技 (GeneTind)",
+    "meta_description": "吉因丰科技是一家以数据服务为核心的技术型公司，致力于推动生命科学、精准医疗及人工智能新发展。",
+    "pageName": "关于我们",
+    "quote": "“Delivering cutting-edge Life Sciences IT solutions to power your business.”",
+    "intro_1": "吉因丰科技 (GeneTind)",
+    "intro_2": " 是以数据服务为核心的技术革新力量，致力于让数据解码基因，驱动人工智能与精准医疗的深度融合。",
+    "card1": "GneroAI-HPC (AI/HPC智算平台)",
+    "card2": "GneroAI-ALL (企业级 AI平台)",
+    "card3": "GneroAI-Lab (企业级 AI组学平台)",
+    "call_anytime": "Call Anytime:"
+  },
+  "GneroAIPage": {
+    "meta_title": "GneroAI | 吉因丰科技 (GeneTind AI)",
+    "meta_description": "探索 GneroAI 的无限可能。我们为生命科学提供最先进的人工智能解决方案，包括智能对话、生信代理和模块化 AI 技能库。",
+    "pageName": "GneroAI 智能平台",
+    "description": "以 GneroAI 为核心，深度融合多组学、生物计算与智能分析能力，为生命科学研究与产业创新提供一体化智能平台。",
+    "doc_link": "进入文档",
+    "secret_link": "✨ 神秘功能"
   }
 }
