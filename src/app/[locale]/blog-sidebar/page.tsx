@@ -3,16 +3,24 @@ import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import NewsLatterBox from "@/components/Contact/NewsLatterBox";
 import Image from "next/image";
-
+import { getTranslations } from "next-intl/server";
+import { useTranslations } from "next-intl";
 import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Details Page for Startup Nextjs Template",
-  // other metadata
-};
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "BlogDetails" });
+  return {
+    title: t("meta_title", { fallback: "Blog with Sidebar | GeneTind" }),
+    description: t("meta_description", { fallback: "Detailed blog post with sidebar from GeneTind." }),
+  };
+}
 
-const BlogSidebarPage = () => {
+const BlogSidebarPage = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "BlogDetails" });
+  const ts = await getTranslations({ locale, namespace: "BlogSidebar" });
+
   return (
     <>
       <section className="overflow-hidden pt-[180px] pb-[120px]">
@@ -38,7 +46,7 @@ const BlogSidebarPage = () => {
                       </div>
                       <div className="w-full">
                         <span className="text-body-color mb-1 text-base font-medium">
-                          By <span> Musharof Chy</span>
+                          {t("by")} <span> Musharof Chy</span>
                         </span>
                       </div>
                     </div>
@@ -100,7 +108,7 @@ const BlogSidebarPage = () => {
                       href="#0"
                       className="bg-primary inline-flex items-center justify-center rounded-full px-4 py-2 text-sm font-semibold text-white"
                     >
-                      Design
+                      {t("design")}
                     </a>
                   </div>
                 </div>
@@ -321,17 +329,17 @@ const BlogSidebarPage = () => {
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
                       <h4 className="text-body-color mb-3 text-sm font-medium">
-                        Popular Tags :
+                        {t("popularTags")}
                       </h4>
                       <div className="flex items-center">
-                        <TagButton text="Design" />
-                        <TagButton text="Development" />
-                        <TagButton text="Info" />
+                        <TagButton text={t("design")} />
+                        <TagButton text={t("development")} />
+                        <TagButton text={t("info")} />
                       </div>
                     </div>
                     <div className="mb-5">
                       <h5 className="text-body-color mb-3 text-sm font-medium sm:text-right">
-                        Share this post :
+                        {t("sharePost")}
                       </h5>
                       <div className="flex items-center sm:justify-end">
                         <SharePost />
@@ -346,7 +354,7 @@ const BlogSidebarPage = () => {
                 <div className="flex items-center justify-between">
                   <input
                     type="text"
-                    placeholder="Search here..."
+                    placeholder={ts("search_placeholder")}
                     className="border-stroke dark:text-body-color-dark dark:shadow-two text-body-color focus:border-primary dark:focus:border-primary mr-4 w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base outline-hidden transition-all duration-300 dark:border-transparent dark:bg-[#2C303B] dark:focus:shadow-none"
                   />
                   <button
@@ -370,7 +378,7 @@ const BlogSidebarPage = () => {
               </div>
               <div className="shadow-three dark:bg-gray-dark mb-10 rounded-xs bg-white dark:shadow-none">
                 <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
-                  Related Posts
+                  {ts("related_posts")}
                 </h3>
                 <ul className="p-8">
                   <li className="border-body-color/10 mb-6 border-b pb-6 dark:border-white/10">
@@ -401,7 +409,7 @@ const BlogSidebarPage = () => {
               </div>
               <div className="shadow-three dark:bg-gray-dark mb-10 rounded-xs bg-white dark:shadow-none">
                 <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
-                  Popular Category
+                  {ts("popular_category")}
                 </h3>
                 <ul className="px-8 py-6">
                   <li>
@@ -448,7 +456,7 @@ const BlogSidebarPage = () => {
               </div>
               <div className="shadow-three dark:bg-gray-dark mb-10 rounded-xs bg-white dark:shadow-none">
                 <h3 className="border-body-color/10 border-b px-8 py-4 text-lg font-semibold text-black dark:border-white/10 dark:text-white">
-                  Popular Tags
+                  {ts("popular_tags")}
                 </h3>
                 <div className="flex flex-wrap px-8 py-6">
                   <TagButton text="Themes" />

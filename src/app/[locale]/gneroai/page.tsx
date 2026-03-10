@@ -1,6 +1,6 @@
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import GneroAIContent from "@/components/GneroAI";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Metadata } from "next";
@@ -14,8 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const GneroAIPage = () => {
-  const t = useTranslations("GneroAIPage");
+const GneroAIPage = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "GneroAIPage" });
   return (
     <>
       <Breadcrumb

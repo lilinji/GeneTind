@@ -14,8 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const AboutPage = () => {
-  const t = useTranslations("AboutPage");
+const AboutPage = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "AboutPage" });
   return (
     <>
       <Breadcrumb

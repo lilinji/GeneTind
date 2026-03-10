@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { getTranslations } from "next-intl/server";
 import { useTranslations } from "next-intl";
 import { Metadata } from "next";
@@ -12,8 +12,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const ErrorPage = () => {
-  const t = useTranslations("Error");
+const ErrorPage = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "Error" });
   return (
     <>
       <section className="relative z-10 pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">

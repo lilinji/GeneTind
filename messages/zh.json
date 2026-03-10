@@ -184,11 +184,14 @@
     "email_placeholder": "输入您的邮箱",
     "password_label": "您的密码",
     "password_placeholder": "输入您的密码",
+    "remember_me": "保持登录状态",
+    "forgot_password": "忘记密码？",
+    "signin_button": "登录",
+    "signup_button": "注册",
     "terms_condition_prefix": "创建账户即表示您同意我们的",
     "terms_link": "条款和条件",
     "terms_middle": "以及我们的",
     "privacy_link": "隐私政策",
-    "signup_button": "注册",
     "already_user": "已经在使用 GeneTind？",
     "signin_link": "登录"
   },
@@ -205,7 +208,9 @@
     "post2_title": "提高设计能力的 9 个简单方法",
     "post2_para": "优秀的设计不仅关乎美观，更关乎如何更清晰地传递复杂的生物学数据。",
     "post3_title": "快速提高编码速度的技巧",
-    "post3_para": "利用 AI 工具和优化的工作流，显著提升生信流程的开发与部署效率。"
+    "post3_para": "利用 AI 工具和优化的工作流，显著提升生信流程的开发与部署效率。",
+    "section_title": "我们的最新博客",
+    "section_paragraph": "通过我们的博客，获取生物医药 AI 领域的最新动态、技术分享和行业洞见。"
   },
   "BlogDetails": {
     "popularTags": "热门标签 :",
@@ -233,5 +238,28 @@
     "subtitle": "直接在您的收件箱中获取最新的资讯。不发垃圾邮件。",
     "email_placeholder": "输入您的邮箱",
     "subscribe_button": "订阅"
+  },
+  "ContactInfo": {
+    "title": "联系我们",
+    "subtitle": "如果您需要更直接的沟通，请通过以下方式联系我们的团队。",
+    "address_title": "办公地址",
+    "address_value": "天津自贸试验区（空港经济区）西七道28号天津智汇谷人工智能产业基地北区一楼A07",
+    "phone_title": "联系电话",
+    "email_title": "客服邮箱"
+  },
+  "Contact": {
+    "title": "给我们留言",
+    "description": "我们的支持团队将尽快通过邮件回复您。",
+    "name_label": "姓名",
+    "name_placeholder": "您的姓名",
+    "email_label": "邮箱",
+    "email_placeholder": "您的邮箱",
+    "phone_label": "电话",
+    "phone_placeholder": "您的电话",
+    "subject_label": "主题",
+    "subject_placeholder": "邮件主题",
+    "message_label": "消息",
+    "message_placeholder": "您的消息",
+    "submit_button": "发送消息"
   }
 }

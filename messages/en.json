@@ -184,11 +184,14 @@
     "email_placeholder": "Enter your email",
     "password_label": "Your Password",
     "password_placeholder": "Enter your password",
+    "remember_me": "Keep me signed in",
+    "forgot_password": "Forgot Password?",
+    "signin_button": "Sign in",
+    "signup_button": "Sign up",
     "terms_condition_prefix": "By creating account means you agree to the",
     "terms_link": "Terms and Conditions",
     "terms_middle": ", and our",
     "privacy_link": "Privacy Policy",
-    "signup_button": "Sign up",
     "already_user": "Already using GeneTind?",
     "signin_link": "Sign in"
   },
@@ -205,7 +208,9 @@
     "post2_title": "9 simple ways to improve your design skills",
     "post2_para": "Great design is not just about aesthetics, but about clearly conveying complex biological data.",
     "post3_title": "Tips to quickly improve your coding speed.",
-    "post3_para": "Leverage AI tools and optimized workflows to significantly boost your bioinformatics development efficiency."
+    "post3_para": "Leverage AI tools and optimized workflows to significantly boost your bioinformatics development efficiency.",
+    "section_title": "Our Latest Blogs",
+    "section_paragraph": "Stay updated with the latest trends, technical insights, and industry news in biomedical AI through our blog."
   },
   "BlogDetails": {
     "popularTags": "Popular Tags :",
@@ -233,5 +238,28 @@
     "subtitle": "Get the latest updates right in your inbox. No spamming.",
     "email_placeholder": "Enter your email",
     "subscribe_button": "Subscribe"
+  },
+  "ContactInfo": {
+    "title": "Contact Us",
+    "subtitle": "If you need a more direct communication, reach out to our team using the methods below.",
+    "address_title": "Office Address",
+    "address_value": "1F-A07, North Zone, Tianjin Smart Valley AI Industrial Base, No. 28 West 7th Road, Tianjin Free Trade Zone (Airport Economic Zone)",
+    "phone_title": "Phone Number",
+    "email_title": "Support Email"
+  },
+  "Contact": {
+    "title": "Leave us a message",
+    "description": "Our support team will get back to you ASAP via email.",
+    "name_label": "Name",
+    "name_placeholder": "Your Name",
+    "email_label": "Email",
+    "email_placeholder": "Your Email",
+    "phone_label": "Phone",
+    "phone_placeholder": "Your Phone",
+    "subject_label": "Subject",
+    "subject_placeholder": "Email Subject",
+    "message_label": "Message",
+    "message_placeholder": "Your Message",
+    "submit_button": "Send Message"
   }
 }

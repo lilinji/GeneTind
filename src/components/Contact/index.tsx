@@ -1,6 +1,9 @@
 import NewsLatterBox from "./NewsLatterBox";
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+  const t = useTranslations("Contact");
+
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
       <div className="container">
@@ -12,10 +15,10 @@ const Contact = () => {
               "
             >
               <h2 className="mb-3 text-2xl font-bold text-black dark:text-white sm:text-3xl lg:text-2xl xl:text-3xl">
-                给我们留言
+                {t("title")}
               </h2>
               <p className="mb-12 text-base font-medium text-body-color">
-                我们的支持团队将尽快通过邮件回复您。
+                {t("description")}
               </p>
               <form>
                 <div className="-mx-4 flex flex-wrap">
@@ -25,11 +28,11 @@ const Contact = () => {
                         htmlFor="name"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        姓名
+                        {t("name_label")}
                       </label>
                       <input
                         type="text"
-                        placeholder="您的姓名"
+                        placeholder={t("name_placeholder")}
                         className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -40,11 +43,11 @@ const Contact = () => {
                         htmlFor="email"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        邮箱
+                        {t("email_label")}
                       </label>
                       <input
                         type="email"
-                        placeholder="您的邮箱"
+                        placeholder={t("email_placeholder")}
                         className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -55,11 +58,11 @@ const Contact = () => {
                         htmlFor="phone"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        电话
+                        {t("phone_label")}
                       </label>
                       <input
                         type="text"
-                        placeholder="您的电话"
+                        placeholder={t("phone_placeholder")}
                         className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -70,11 +73,11 @@ const Contact = () => {
                         htmlFor="subject"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        主题
+                        {t("subject_label")}
                       </label>
                       <input
                         type="text"
-                        placeholder="邮件主题"
+                        placeholder={t("subject_placeholder")}
                         className="border-stroke w-full rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       />
                     </div>
@@ -85,19 +88,19 @@ const Contact = () => {
                         htmlFor="message"
                         className="mb-3 block text-sm font-medium text-dark dark:text-white"
                       >
-                        消息
+                        {t("message_label")}
                       </label>
                       <textarea
                         name="message"
                         rows={5}
-                        placeholder="您的消息"
+                        placeholder={t("message_placeholder")}
                         className="border-stroke w-full resize-none rounded-xs border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-hidden focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:text-body-color-dark dark:shadow-two dark:focus:border-primary dark:focus:shadow-none"
                       ></textarea>
                     </div>
                   </div>
                   <div className="w-full px-4">
                     <button className="rounded-xs bg-primary px-9 py-4 text-base font-medium text-white shadow-submit duration-300 hover:bg-primary/90 dark:shadow-submit-dark">
-                      发送消息
+                      {t("submit_button")}
                     </button>
                   </div>
                 </div>

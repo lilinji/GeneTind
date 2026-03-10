@@ -1,34 +1,36 @@
 "use client";
 
 import { useTheme } from "next-themes";
+import { useTranslations } from "next-intl";
 
 const NewsLatterBox = () => {
   const { theme } = useTheme();
+  const t = useTranslations("ContactInfo");
 
   return (
     <div className="shadow-three dark:bg-gray-dark relative z-10 rounded-xs bg-white p-8 sm:p-11 lg:p-8 xl:p-11">
       <h3 className="mb-4 text-2xl leading-tight font-bold text-black dark:text-white">
-        联系我们
+        {t("title")}
       </h3>
       <p className="border-body-color/25 text-body-color mb-11 border-b pb-11 text-base leading-relaxed dark:border-white/25">
-        如果您需要更直接的沟通，请通过以下方式联系我们的团队。
+        {t("subtitle")}
       </p>
       <div className="space-y-8">
         <div>
-          <h4 className="mb-2 text-lg font-bold text-black dark:text-white">办公地址</h4>
+          <h4 className="mb-2 text-lg font-bold text-black dark:text-white">{t("address_title")}</h4>
           <p className="text-base font-medium text-body-color leading-relaxed">
-            天津自贸试验区（空港经济区）西七道28号天津智汇谷人工智能产业基地北区一楼A07
+            {t("address_value")}
           </p>
         </div>
         <div>
-          <h4 className="mb-2 text-lg font-bold text-black dark:text-white">联系电话</h4>
+          <h4 className="mb-2 text-lg font-bold text-black dark:text-white">{t("phone_title")}</h4>
           <p className="text-base font-medium text-body-color leading-relaxed">
             (86) 18665379896 <br />
             (86) 17622787688
           </p>
         </div>
         <div>
-          <h4 className="mb-2 text-lg font-bold text-black dark:text-white">客服邮箱</h4>
+          <h4 className="mb-2 text-lg font-bold text-black dark:text-white">{t("email_title")}</h4>
           <p className="text-base font-medium text-body-color leading-relaxed">
             lilinji@genetind.com <br />
             help@genetind.com

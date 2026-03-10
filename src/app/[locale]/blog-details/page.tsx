@@ -14,8 +14,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const BlogDetailsPage = () => {
-  const t = useTranslations("BlogDetails");
+import { Link } from "@/i18n/navigation";
+
+const BlogDetailsPage = async ({ params }: { params: Promise<{ locale: string }> }) => {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "BlogDetails" });
   return (
     <>
       <section className="pt-[150px] pb-[120px]">

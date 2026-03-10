@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
-    "baseUrl": ".",
+    "ignoreDeprecations": "6.0",
+    // 原 baseUrl 已弃用，使用 ignoreDeprecations 抑制 TypeScript 7.0 报错
     "paths": {
       "@/*": ["./*"]
     }
