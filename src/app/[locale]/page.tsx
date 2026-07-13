@@ -12,7 +12,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Genetind Vision-----让生命无法计算的价值！",
-  description: "Genrtind AI Gnero ALL",
+  description: "Genetind AI Gnero ALL",
   // other metadata
 };
 
