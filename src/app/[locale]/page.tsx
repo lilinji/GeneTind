@@ -4,6 +4,8 @@ import Brands from "@/components/Brands";
 import ScrollUp from "@/components/Common/ScrollUp";
 import Contact from "@/components/Contact";
 import Features from "@/components/Features";
+import HPCSection from "@/components/HPC/HPCSection";
+import ServerVendorMarquee from "@/components/HPC/ServerVendorMarquee";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
@@ -22,6 +24,8 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <Features />
+      <HPCSection />
+      <ServerVendorMarquee />
       <Video />
       <Brands />
       <AboutSectionOne />
