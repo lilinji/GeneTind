@@ -3,6 +3,7 @@ import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import PricingBannerVideo from "./PricingBannerVideo";
 import { useTranslations } from "next-intl";
 
 const Pricing = () => {
@@ -58,6 +59,8 @@ const Pricing = () => {
             <OfferList text={t("platform_f6")} status="active" />
           </PricingBox>
         </div>
+
+        <PricingBannerVideo />
       </div>
 
       <div className="absolute bottom-0 left-0 z-[-1]">

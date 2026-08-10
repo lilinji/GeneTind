@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { useTranslations } from "next-intl";
 import { useSearchParams } from "next/navigation";
+import { Link } from "@/i18n/navigation";
 import SectionTitle from "../Common/SectionTitle";
 
 type CategoryType = "all" | "server" | "storage" | "network" | "software";
@@ -375,7 +376,7 @@ const HPCPageContent = () => {
 
               {/* Card Footer Action */}
               <div className="pt-4 border-t border-gray-100 dark:border-white/10 flex items-center justify-between">
-                <a
+                <Link
                   href="/contact"
                   className="inline-flex items-center gap-2 rounded-lg bg-primary/10 hover:bg-primary px-4 py-2 text-xs font-bold text-primary hover:text-white transition-all duration-300"
                 >
@@ -383,7 +384,7 @@ const HPCPageContent = () => {
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                   </svg>
-                </a>
+                </Link>
                 <span className="text-xs font-mono text-gray-400 dark:text-white/40">
                   GeneTind HPC Stack
                 </span>

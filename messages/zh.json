@@ -90,6 +90,8 @@
   "Pricing": {
     "title": "GneroAI 订阅方案",
     "paragraph": "针对不同规模企业的智能化需求，提供从基础对话到综合平台的灵活选择。",
+    "banner_title": "与全行业伙伴协同进化，释放生命科学 AI 潜能",
+    "banner_subtitle": "GeneTind 生物智能协同生态",
     "lite_subtitle": "基础 AI 对话与知识库助手",
     "lite_f1": "GneroAI Chat 基础版",
     "lite_f2": "企业知识库接入",
