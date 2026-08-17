@@ -74,7 +74,7 @@ const Hero = () => {
                     </p>
                     <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-y-0 sm:space-x-4">
                       <Link
-                        href="https://gneroai.genetind.com"
+                        href="https://ai.genetind.com"
                         className="bg-primary hover:bg-primary/80 rounded-xs px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out"
                       >
                         {t("getPro")}
