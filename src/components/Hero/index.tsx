@@ -163,7 +163,7 @@ const Hero = () => {
 
                             <div className="flex flex-col items-start gap-4">
                               <Link
-                                href="https://gnero.genetind.com/zh/openclaw"
+                                href="https://ai.genetind.com/"
                                 target="_blank"
                                 rel="noreferrer"
                                 className="inline-flex items-center gap-2 rounded-full bg-[linear-gradient(135deg,#fde68a,#fb923c)] px-7 py-3.5 text-sm font-bold text-slate-950 shadow-[0_22px_40px_-24px_rgba(251,146,60,0.85)] transition duration-300 ease-in-out hover:scale-[1.02] hover:shadow-[0_28px_46px_-24px_rgba(251,146,60,0.95)] sm:px-8 sm:py-4 sm:text-base"

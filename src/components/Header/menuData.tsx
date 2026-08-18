@@ -34,7 +34,7 @@ const menuData: Menu[] = [
   {
     id: 6,
     title: "Blog",
-    path: "https://harness.genetind.com",
+    path: "https://ai.genetind.com",
     newTab: true,
   },
   {
