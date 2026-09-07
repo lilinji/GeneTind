@@ -23,6 +23,7 @@ const menuData: Menu[] = [
     id: 4,
     title: "GneSkills",
     path: "https://www.skillkit.sh",
+    // path: "https://github.com/lilinji/GeneTind-Life-Skills",
     newTab: true,
   },
   {

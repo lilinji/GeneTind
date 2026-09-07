@@ -1,45 +1,39 @@
 import { Testimonial } from "@/types/testimonial";
 import Image from "next/image";
-const starIcon = (
-  <svg width="18" height="16" viewBox="0 0 18 16" className="fill-current">
-    <path d="M9.09815 0.361679L11.1054 6.06601H17.601L12.3459 9.59149L14.3532 15.2958L9.09815 11.7703L3.84309 15.2958L5.85035 9.59149L0.595291 6.06601H7.0909L9.09815 0.361679Z" />
-  </svg>
-);
+import { Star } from "lucide-react";
 
 const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
   const { star, name, image, content, designation } = testimonial;
 
-  let ratingIcons = [];
-  for (let index = 0; index < star; index++) {
-    ratingIcons.push(
-      <span key={index} className="text-yellow">
-        {starIcon}
-      </span>,
-    );
-  }
-
   return (
     <div className="w-full h-full group">
-      <div className="relative h-full rounded-2xl bg-white/60 dark:bg-gray-dark/40 backdrop-blur-md border border-white/20 dark:border-white/10 p-8 shadow-two drop-shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(74,108,247,0.3)] hover:border-primary/30 overflow-hidden lg:px-5 xl:px-8">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="relative h-full rounded-2xl border border-zinc-200/80 bg-zinc-50/70 p-8 backdrop-blur-xl shadow-xs transition-all duration-300 hover:border-emerald-500/40 hover:bg-white hover:shadow-lg dark:border-white/[0.08] dark:bg-[#0b111d]/90 dark:hover:bg-[#0e1626] flex flex-col justify-between">
+        <div>
+          {/* Star Rating */}
+          <div className="flex items-center space-x-1 text-emerald-500 dark:text-emerald-400">
+            {Array.from({ length: star }).map((_, index) => (
+              <Star key={index} className="h-4 w-4 fill-emerald-500 text-emerald-500 dark:fill-emerald-400 dark:text-emerald-400" />
+            ))}
+          </div>
 
-        <div className="relative z-10 mb-6 flex items-center space-x-1 group-hover:scale-105 group-hover:drop-shadow-[0_0_8px_rgba(251,176,64,0.5)] transition-all duration-300 transform origin-left">
-          {ratingIcons}
+          {/* Quote Body */}
+          <p className="mt-6 text-sm sm:text-base leading-relaxed text-zinc-700 dark:text-zinc-300 italic font-serif">
+            “{content}”
+          </p>
         </div>
 
-        <p className="relative z-10 border-b border-body-color/10 pb-8 mb-8 text-base leading-relaxed text-body-color dark:border-white/10 dark:text-gray-300 font-medium italic transition-colors duration-300 group-hover:text-body-color-dark dark:group-hover:text-white">
-          “{content}”
-        </p>
-
-        <div className="relative z-10 flex items-center">
-          <div className="relative mr-4 h-[55px] w-full max-w-[55px] overflow-hidden rounded-full border-2 border-transparent transition-all duration-300 group-hover:border-primary/50 group-hover:shadow-[0_0_15px_rgba(74,108,247,0.3)]">
+        {/* Author Footer */}
+        <div className="mt-8 pt-6 border-t border-zinc-200/80 dark:border-white/[0.08] flex items-center gap-3.5">
+          <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-full border border-zinc-200 dark:border-white/10">
             <Image src={image} alt={name} fill className="object-cover" />
           </div>
-          <div className="w-full">
-            <h3 className="mb-1 text-lg font-bold text-dark dark:text-white lg:text-base xl:text-lg transition-colors duration-300 group-hover:text-primary">
+          <div>
+            <h4 className="font-mono text-sm font-bold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
               {name}
-            </h3>
-            <p className="text-sm text-body-color font-medium">{designation}</p>
+            </h4>
+            <p className="font-mono text-xs text-zinc-500 dark:text-zinc-400">
+              {designation}
+            </p>
           </div>
         </div>
       </div>

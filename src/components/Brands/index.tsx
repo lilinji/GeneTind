@@ -1,41 +1,40 @@
-import { Brand } from "@/types/brand";
-import Image from "next/image";
-import brandsData from "./brandsData";
+import { techPartners } from "./brandsData";
 
 const Brands = () => {
   return (
-    <section className="pt-16">
-      <div className="container">
-        <div className="-mx-4 flex flex-wrap">
-          <div className="w-full px-4">
-            <div className="flex flex-wrap items-center justify-center rounded-xs bg-gray-light px-8 py-8 dark:bg-gray-dark sm:px-10 md:px-[50px] md:py-[40px] xl:p-[50px] 2xl:px-[70px] 2xl:py-[60px]">
-              {brandsData.map((brand) => (
-                <SingleBrand key={brand.id} brand={brand} />
-              ))}
-            </div>
-          </div>
+    <section className="relative z-10 overflow-hidden bg-white dark:bg-[#060911] py-16 transition-colors duration-300">
+      <div className="container relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        
+        {/* Overline heading */}
+        <div className="text-center mb-8">
+          <p className="font-mono text-xs uppercase tracking-widest text-zinc-500 dark:text-zinc-400">
+            Engineered with Leading AI & Bioinformatics Infrastructure
+          </p>
         </div>
+
+        {/* Partners Ribbon Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          {techPartners.map((partner) => (
+            <div
+              key={partner.id}
+              className="group rounded-xl border border-zinc-200/80 bg-zinc-50/80 p-4 backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/40 hover:bg-white hover:shadow-md dark:border-white/[0.06] dark:bg-[#0b111d]/70 dark:hover:bg-[#0e1626] text-center"
+            >
+              <div className="font-mono text-base font-bold tracking-tight text-zinc-800 dark:text-zinc-300 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                {partner.name}
+              </div>
+              <div className="mt-1 text-[11px] font-medium text-zinc-500 dark:text-zinc-400 truncate">
+                {partner.category}
+              </div>
+              <div className="mt-1 font-mono text-[10px] text-zinc-400 dark:text-zinc-400 truncate">
+                {partner.spec}
+              </div>
+            </div>
+          ))}
+        </div>
+
       </div>
     </section>
   );
 };
 
 export default Brands;
-
-const SingleBrand = ({ brand }: { brand: Brand }) => {
-  const { href, image, imageLight, name } = brand;
-
-  return (
-    <div className="flex w-1/2 items-center justify-center px-3 py-[15px] sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/6">
-      <a
-        href={href}
-        target="_blank"
-        rel="nofollow noreferrer"
-        className="relative h-10 w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100"
-      >
-        <Image src={imageLight} alt={name} fill className="hidden dark:block" />
-        <Image src={image} alt={name} fill className="block dark:hidden" />
-      </a>
-    </div>
-  );
-};

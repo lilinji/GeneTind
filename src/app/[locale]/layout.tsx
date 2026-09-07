@@ -1,4 +1,4 @@
-import { Inter, Outfit } from "next/font/google";
+import { Geist, Geist_Mono, Playfair_Display } from "next/font/google";
 import { Metadata } from "next";
 import Script from "next/script";
 import "../../styles/index.css";
@@ -8,12 +8,25 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
-const inter = Inter({ subsets: ["latin"] });
-const outfit = Outfit({ subsets: ["latin"] });
+const geistSans = Geist({
+  variable: "--font-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-mono",
+  subsets: ["latin"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-serif",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+});
 
 export const metadata: Metadata = {
-  title: "吉因丰科技 | GneroAI 智能平台",
-  description: "以 AI 为核心，深度融合多组学、生物计算与智能分析能力，为生命科学研究与产业创新提供一体化智能平台。",
+  title: "GeneTind 吉因丰科技 | 生命科学 IT 数据分析与 HPC 智算平台",
+  description: "以 GneroAI 与 HPC 智算算力为核心，融合多组学数据、AI 算力服务器与全闪并行存储，打造下一代生命科学智能基础设施。",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "32x32", type: "image/x-icon" },
@@ -42,7 +55,7 @@ export default async function RootLayout(props: {
   return (
     <html suppressHydrationWarning lang={locale}>
       <head />
-      <body className={`bg-[#FCFCFC] dark:bg-black ${outfit.className}`}>
+      <body className={`bg-[#fafafa] text-zinc-900 dark:bg-[#060911] dark:text-zinc-100 antialiased selection:bg-emerald-500/20 selection:text-emerald-800 dark:selection:bg-emerald-500/30 dark:selection:text-emerald-200 ${geistSans.variable} ${geistMono.variable} ${playfair.variable} font-sans transition-colors duration-300`}>
         <Script defer src="https://cloud.umami.is/script.js" data-website-id="7d79219d-6f80-412c-b896-2d508b01940a" />
         <NextIntlClientProvider messages={messages}>
           <ClientLayout>{props.children}</ClientLayout>

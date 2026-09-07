@@ -1,5 +1,5 @@
-import Breadcrumb from "@/components/Common/Breadcrumb";
 import HPCPageContent from "@/components/HPC/HPCPageContent";
+import ServerVendorMarquee from "@/components/HPC/ServerVendorMarquee";
 import { getTranslations } from "next-intl/server";
 import { Metadata } from "next";
 import { Suspense } from "react";
@@ -13,30 +13,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   };
 }
 
-const HPCPage = async ({ params }: { params: Promise<{ locale: string }> }) => {
-  const { locale } = await params;
-  const t = await getTranslations({ locale, namespace: "HPCPage" });
-
+const HPCPage = async () => {
   return (
     <>
-      <Breadcrumb
-        pageName={t("pageName")}
-        description={
-          <div className="space-y-4 max-w-3xl">
-            <p className="text-base md:text-lg leading-relaxed text-body-color dark:text-white/80">
-              {t("description")}
-            </p>
-          </div>
-        }
-      />
-
       <Suspense fallback={
-        <div className="py-20 text-center text-gray-500 dark:text-gray-400">
-          加载 HPC 产品数据中...
+        <div className="py-40 text-center font-mono text-sm text-zinc-500 dark:text-zinc-400">
+          Loading HPC Infrastructure Matrix...
         </div>
       }>
         <HPCPageContent />
       </Suspense>
+      <ServerVendorMarquee />
     </>
   );
 };

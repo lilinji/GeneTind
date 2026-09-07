@@ -1,82 +1,79 @@
+"use client";
+
+import { useTranslations } from "next-intl";
+import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "@/i18n/navigation";
+
 const PricingBox = (props: {
   price?: string;
   duration?: string;
   packageName: string;
   subtitle: string;
   children: React.ReactNode;
+  popular?: boolean;
 }) => {
-  const { price, duration, packageName, subtitle, children } = props;
+  const { price, duration, packageName, subtitle, children, popular } = props;
+  const t = useTranslations("Pricing");
 
   return (
     <div className="w-full h-full group">
-      <div className="relative h-full rounded-2xl bg-white/60 dark:bg-gray-dark/40 backdrop-blur-md border border-white/20 dark:border-white/10 p-8 shadow-two drop-shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_15px_40px_-15px_rgba(74,108,247,0.3)] hover:border-primary/30 overflow-hidden z-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      <div
+        className={`relative h-full rounded-2xl border bg-white/95 p-8 backdrop-blur-xl shadow-md transition-all duration-300 hover:shadow-xl dark:bg-[#0b111d]/90 dark:hover:bg-[#0e1626] flex flex-col justify-between ${
+          popular
+            ? "border-emerald-500/50 shadow-emerald-500/10 dark:border-emerald-500/40"
+            : "border-zinc-200/80 hover:border-emerald-500/30 dark:border-white/[0.08]"
+        }`}
+      >
+        {popular && (
+          <div className="absolute -top-3.5 right-6 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500 px-3 py-0.5 text-xs font-mono font-semibold text-zinc-950 shadow-md">
+            <Sparkles className="h-3 w-3" />
+            <span>Recommended</span>
+          </div>
+        )}
 
-        <div className="relative z-10 flex items-center justify-between">
-          <h3 className="mb-2 text-[32px] font-bold text-black dark:text-white transition-colors duration-300 group-hover:bg-clip-text group-hover:text-transparent group-hover:bg-gradient-to-r group-hover:from-primary group-hover:to-[#9b8fff]">
-            {price && (
-              <>
-                $<span className="amount">{price}</span>
-                <span className="text-body-color text-lg font-medium transition-colors duration-300 group-hover:text-body-color-dark dark:group-hover:text-gray-300">
-                  /{duration}
-                </span>
-              </>
+        <div>
+          {/* Header Row */}
+          <div className="flex items-center justify-between border-b border-zinc-100 dark:border-white/[0.08] pb-6">
+            <div>
+              <h4 className="font-mono text-xl font-bold tracking-tight text-zinc-900 dark:text-white">
+                {packageName}
+              </h4>
+              <p className="mt-1 text-xs text-zinc-500 dark:text-zinc-400">
+                {subtitle}
+              </p>
+            </div>
+            
+            {price ? (
+              <div className="text-right">
+                <span className="font-mono text-2xl font-bold text-emerald-600 dark:text-emerald-400">${price}</span>
+                <span className="font-mono text-xs text-zinc-500 dark:text-zinc-400">/{duration}</span>
+              </div>
+            ) : (
+              <span className="rounded-full border border-zinc-200 bg-zinc-50 px-3 py-1 font-mono text-xs text-zinc-700 dark:border-white/10 dark:bg-white/[0.04] dark:text-zinc-300">
+                Enterprise
+              </span>
             )}
-          </h3>
-          <h4 className="mb-2 text-xl font-bold text-dark dark:text-white transition-colors duration-300 group-hover:text-primary">
-            {packageName}
-          </h4>
+          </div>
+
+          {/* Features List */}
+          <div className="mt-6 space-y-3">
+            {children}
+          </div>
         </div>
-        <p className="relative z-10 text-body-color mb-7 text-base transition-colors duration-300 group-hover:text-body-color-dark dark:group-hover:text-gray-300">{subtitle}</p>
-        <div className="relative z-10 border-b border-body-color/10 pb-8 mb-8 dark:border-white/10">
-          <button className="flex w-full items-center justify-center rounded-full bg-primary/90 p-4 text-base font-bold text-white transition-all duration-300 hover:bg-primary shadow-[0_5px_15px_rgba(74,108,247,0.2)] hover:shadow-[0_10px_25px_rgba(74,108,247,0.4)] hover:-translate-y-1">
-            Start Free Trial
-          </button>
-        </div>
-        <div className="relative z-10">{children}</div>
-        <div className="absolute right-0 bottom-0 z-[-1]">
-          <svg
-            width="179"
-            height="158"
-            viewBox="0 0 179 158"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+
+        {/* CTA Button */}
+        <div className="mt-8 pt-6 border-t border-zinc-100 dark:border-white/[0.08]">
+          <Link
+            href="/contact"
+            className={`flex w-full items-center justify-center gap-2 rounded-full py-3.5 text-xs font-mono font-semibold transition-all ${
+              popular
+                ? "bg-emerald-500 text-zinc-950 hover:bg-emerald-400 shadow-lg shadow-emerald-500/20"
+                : "border border-zinc-200 bg-zinc-50 text-zinc-800 hover:bg-zinc-100 dark:border-white/10 dark:bg-white/[0.04] dark:text-white dark:hover:bg-white/[0.08]"
+            }`}
           >
-            <path
-              opacity="0.5"
-              d="M75.0002 63.256C115.229 82.3657 136.011 137.496 141.374 162.673C150.063 203.47 207.217 197.755 202.419 167.738C195.393 123.781 137.273 90.3579 75.0002 63.256Z"
-              fill="url(#paint0_linear_70:153)"
-            />
-            <path
-              opacity="0.3"
-              d="M178.255 0.150879C129.388 56.5969 134.648 155.224 143.387 197.482C157.547 265.958 65.9705 295.709 53.1024 246.401C34.2588 174.197 100.939 83.7223 178.255 0.150879Z"
-              fill="url(#paint1_linear_70:153)"
-            />
-            <defs>
-              <linearGradient
-                id="paint0_linear_70:153"
-                x1="69.6694"
-                y1="29.9033"
-                x2="196.108"
-                y2="83.2919"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_70:153"
-                x1="165.348"
-                y1="-75.4466"
-                x2="-3.75136"
-                y2="103.645"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#4A6CF7" stopOpacity="0.62" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
+            <span>{t("start_trial")}</span>
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
         </div>
       </div>
     </div>

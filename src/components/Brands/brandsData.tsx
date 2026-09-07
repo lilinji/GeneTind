@@ -1,48 +1,45 @@
-import { Brand } from "@/types/brand";
+export interface TechPartner {
+  id: string;
+  name: string;
+  category: string;
+  spec: string;
+}
 
-const brandsData: Brand[] = [
+export const techPartners: TechPartner[] = [
   {
-    id: 6,
-    name: "Formbold",
-    href: "https://genetind.com",
-    image: "/images/brands/formbold.svg",
-    imageLight: "/images/brands/formbold-light.svg",
+    id: "nvidia",
+    name: "NVIDIA",
+    category: "GPU & AI Computing",
+    spec: "CUDA · TensorRT · Clara",
   },
   {
-    id: 1,
-    name: "UIdeck",
-    href: "https://genetind.com",
-    image: "/images/brands/uideck.svg",
-    imageLight: "/images/brands/uideck-light.svg",
+    id: "intel",
+    name: "Intel",
+    category: "Heterogeneous Compute",
+    spec: "Xeon Scalable · oneAPI",
   },
   {
-    id: 2,
-    name: "Tailgrids",
-    href: "https://genetind.com",
-    image: "/images/brands/tailgrids.svg",
-    imageLight: "/images/brands/tailgrids-light.svg",
+    id: "amd",
+    name: "AMD",
+    category: "High-Density Server",
+    spec: "EPYC 9004 · Instinct MI300",
   },
   {
-    id: 3,
-    name: "Lineicons",
-    href: "https://genetind.com",
-    image: "/images/brands/lineicons.svg",
-    imageLight: "/images/brands/lineicons-light.svg",
+    id: "nextflow",
+    name: "Nextflow",
+    category: "Bio-Pipeline Orchestration",
+    spec: "nf-core · Reproducible",
   },
   {
-    id: 4,
-    name: "Tailadmin",
-    href: "https://genetind.com",
-    image: "/images/brands/tailadmin.svg",
-    imageLight: "/images/brands/tailadmin-light.svg",
+    id: "slurm",
+    name: "SchedMD Slurm",
+    category: "Workload Management",
+    spec: "High-Throughput HPC",
   },
   {
-    id: 5,
-    name: "PlainAdmin",
-    href: "https://genetind.com",
-    image: "/images/brands/plainadmin.svg",
-    imageLight: "/images/brands/plainadmin-light.svg",
+    id: "broadcom",
+    name: "Broadcom",
+    category: "Fabric Interconnect",
+    spec: "PCIe Gen5 · RoCEv2",
   },
 ];
-
-export default brandsData;
