@@ -28,16 +28,16 @@ const Footer = () => {
               <Image
                 src="/images/logo/logo-2.svg"
                 alt="GeneTind Logo"
-                width={140}
-                height={30}
+                width={144}
+                height={40}
                 className="dark:hidden"
               />
               <Image
                 src="/images/logo/logo.svg"
                 alt="GeneTind Logo"
-                width={140}
-                height={30}
-                className="hidden dark:block brightness-110"
+                width={144}
+                height={40}
+                className="hidden dark:block"
               />
             </Link>
             <p className="max-w-sm text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">

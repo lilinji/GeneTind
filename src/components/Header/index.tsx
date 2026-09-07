@@ -59,19 +59,19 @@ const Header = () => {
         {/* Brand Logo & Telemetry Status Indicator */}
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center gap-2 group">
-            <div className="relative h-7 w-28 md:w-32 transition-transform duration-300 group-hover:scale-[1.02]">
+            <div className="relative h-8 w-32 md:w-36 transition-transform duration-300 group-hover:scale-[1.02]">
               <Image
                 src="/images/logo/logo-2.svg"
                 alt="GeneTind Logo"
                 fill
-                className="object-contain dark:hidden"
+                className="object-contain object-left dark:hidden"
                 priority
               />
               <Image
                 src="/images/logo/logo.svg"
                 alt="GeneTind Logo"
                 fill
-                className="object-contain hidden dark:block"
+                className="object-contain object-left hidden dark:block"
                 priority
               />
             </div>

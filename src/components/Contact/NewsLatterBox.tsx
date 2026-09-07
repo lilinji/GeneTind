@@ -32,7 +32,7 @@ const NewsLatterBox = () => {
         <div>
           <h4 className="mb-2 text-lg font-bold text-black dark:text-white">{t("email_title")}</h4>
           <p className="text-base font-medium text-body-color leading-relaxed">
-            lilinji@genetind.com <br />
+            service@genetind.com <br />
             help@genetind.com
           </p>
         </div>
