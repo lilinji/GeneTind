@@ -18,6 +18,7 @@
 # misc
 .DS_Store
 *.pem
+scratch/
 
 # debug
 npm-debug.log*
@@ -25,8 +26,8 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# local env files
-.env*.local
+# local env files (allow tracking for email config)
+# .env*.local
 
 # vercel
 .vercel
